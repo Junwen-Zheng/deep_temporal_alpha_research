@@ -7,7 +7,9 @@ data:
   end_month: "2026-06"
 
   raw_dir: "data/raw"
+  processed_dir: "data/processed"
   manifest_path: "data/manifests/download_manifest.json"
+  normalized_manifest_path: "data/manifests/normalized_manifest.json"
 
   symbols:
     - BTCUSDT

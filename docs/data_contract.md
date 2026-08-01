@@ -38,3 +38,22 @@ The raw kline schema contains both open time and close time.
 A completed bar may only be used after its recorded close time. Later
 milestones must preserve this distinction through an explicit
 `available_time` field.
+
+## Normalized bar schema
+
+Each symbol is written to an independent compressed Parquet file with:
+
+- `timestamp`: bar open time in UTC;
+- `available_time`: recorded bar close time in UTC;
+- `symbol`;
+- OHLC prices;
+- base and quote volume;
+- trade count;
+- taker-buy base and quote volume.
+
+Normalization rejects duplicate timestamps, malformed rows, invalid OHLC
+relationships, negative activity fields, non-finite numbers, misaligned
+timestamps, and unexpected gaps.
+
+The model pipeline must use `available_time`, rather than assuming that data
+was observable at `timestamp`.

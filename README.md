@@ -20,3 +20,9 @@ The initial dataset consists of verified monthly Binance USD-M futures
 5-minute kline archives from July 2025 through June 2026. Every raw archive
 is validated against its publisher-provided SHA-256 checksum and represented
 in a versioned manifest.
+
+## Normalized data
+
+Verified CSV archives are normalized into typed, compressed Parquet files.
+The pipeline preserves separate event and availability timestamps and records
+row counts, gaps, file hashes, and output locations in a versioned manifest.
