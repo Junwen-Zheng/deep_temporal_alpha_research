@@ -1,0 +1,24 @@
+research:
+  interval_minutes: 5
+  sequence_length: 128
+  target_horizon_bars: 12
+  expected_symbol_count: 20
+
+  output_path: "data/processed/research/research_panel.parquet"
+  manifest_path: "data/manifests/research_dataset_manifest.json"
+
+  folds:
+    - fold_id: 1
+      train_end: "2025-11-30T23:55:00Z"
+      validation_end: "2025-12-31T23:55:00Z"
+      test_end: "2026-02-28T23:55:00Z"
+
+    - fold_id: 2
+      train_end: "2026-01-31T23:55:00Z"
+      validation_end: "2026-02-28T23:55:00Z"
+      test_end: "2026-04-30T23:55:00Z"
+
+    - fold_id: 3
+      train_end: "2026-03-31T23:55:00Z"
+      validation_end: "2026-04-30T23:55:00Z"
+      test_end: "2026-06-30T23:55:00Z"

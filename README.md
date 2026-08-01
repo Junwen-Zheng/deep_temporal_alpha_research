@@ -26,3 +26,12 @@ in a versioned manifest.
 Verified CSV archives are normalized into typed, compressed Parquet files.
 The pipeline preserves separate event and availability timestamps and records
 row counts, gaps, file hashes, and output locations in a versioned manifest.
+
+## Research panel
+
+The causal feature pipeline constructs lagged return, volatility, activity,
+order-flow, and cyclical-time inputs from completed bars. Labels represent
+the following 60-minute cross-sectionally demeaned log return.
+
+Every row records its label end time. Walk-forward splits remove observations
+whose forward target crosses a train, validation, or test boundary.
