@@ -13,3 +13,10 @@ The project will include:
 - MLP, TCN, and Transformer comparisons;
 - null tests and transaction-cost diagnostics;
 - reproducible evidence and a self-contained research report.
+
+## Market data
+
+The initial dataset consists of verified monthly Binance USD-M futures
+5-minute kline archives from July 2025 through June 2026. Every raw archive
+is validated against its publisher-provided SHA-256 checksum and represented
+in a versioned manifest.

@@ -1,0 +1,32 @@
+data:
+  market: futures_um
+  dataset: klines
+  interval: 5m
+
+  start_month: "2025-07"
+  end_month: "2026-06"
+
+  raw_dir: "data/raw"
+  manifest_path: "data/manifests/download_manifest.json"
+
+  symbols:
+    - BTCUSDT
+    - ETHUSDT
+    - BNBUSDT
+    - SOLUSDT
+    - XRPUSDT
+    - ADAUSDT
+    - DOGEUSDT
+    - AVAXUSDT
+    - LINKUSDT
+    - DOTUSDT
+    - LTCUSDT
+    - BCHUSDT
+    - TRXUSDT
+    - ETCUSDT
+    - XLMUSDT
+    - ATOMUSDT
+    - FILUSDT
+    - NEARUSDT
+    - APTUSDT
+    - ARBUSDT
