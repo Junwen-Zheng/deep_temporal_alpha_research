@@ -1,0 +1,21 @@
+rebalance_sensitivity:
+  evaluation_config: "configs/evaluation.yaml"
+
+  source_cohort_metrics: "artifacts/evidence/break_even_cohort_metrics.csv"
+  source_model_summary: "artifacts/evidence/break_even_model_summary.csv"
+  source_break_even_manifest: "artifacts/evidence/break_even_run_manifest.json"
+
+  cadence_bars:
+    - 1
+    - 3
+    - 6
+    - 12
+
+  cost_bps:
+    - 0.0
+    - 1.0
+    - 2.0
+    - 5.0
+    - 10.0
+
+  evidence_dir: "artifacts/evidence"

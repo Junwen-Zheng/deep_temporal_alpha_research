@@ -99,3 +99,11 @@ The economic analysis computes exact cohort-level, equal-weighted, and pooled
 break-even transaction costs. A dense 0–10 basis-point curve shows how quickly
 mean returns deteriorate with traded notional without interpolating nonlinear
 Sharpe-ratio behavior.
+
+## Rebalance-frequency sensitivity
+
+The fixed 60-minute forecast is evaluated with signal refresh every 5, 15, 30,
+and 60 minutes. Every clock phase is included through equal-capital staggered
+hourly sleeves. The analysis reports phase-level mean return, turnover and
+break-even cost without treating overlapping launches as independent Sharpe
+observations.

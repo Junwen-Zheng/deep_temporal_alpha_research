@@ -1,0 +1,53 @@
+{
+  "annualization_periods": 8760,
+  "cadence_bars": [
+    1,
+    3,
+    6,
+    12
+  ],
+  "cadence_minutes": [
+    5,
+    15,
+    30,
+    60
+  ],
+  "cost_bps": [
+    0.0,
+    1.0,
+    2.0,
+    5.0,
+    10.0
+  ],
+  "evaluation_config": "configs/evaluation.yaml",
+  "evaluation_config_sha256": "c689e74f6bdba0b35b45ee2084652bfc9afa9b53e4499b98308353164ae1a242",
+  "evidence_files": {
+    "artifacts/evidence/rebalance_cadence_summary.csv": "18464bc56895be76e81573687fad379f864332248d440cc698bb972ecb6813fa",
+    "artifacts/evidence/rebalance_phase_map.csv": "6d194ed16d8c54f4bcf62fbf62f4bade4e6417846691dabc67545fa334e6e402",
+    "artifacts/evidence/rebalance_phase_metrics.csv": "ac26f99e51d2607ea88eb6ed4588e731b5048ac43d434baf65e9f54257e6b13a"
+  },
+  "holding_bars": 12,
+  "holding_minutes": 60,
+  "interval_minutes": 5,
+  "method": "equal-capital staggered hourly sleeves grouped by signal-refresh cadence and clock phase",
+  "models": [
+    "momentum_12",
+    "reversal_12",
+    "ridge",
+    "lightgbm",
+    "mlp",
+    "tcn",
+    "transformer"
+  ],
+  "phase_count_total": 22,
+  "schema_version": 1,
+  "sensitivity_config": "configs/rebalance_sensitivity.yaml",
+  "sensitivity_config_sha256": "1e1316176a50d22d56d585ed90337e67358870e4e3ace38821207e2f2991798e",
+  "sharpe_aggregation_performed": false,
+  "source_break_even_manifest": "artifacts/evidence/break_even_run_manifest.json",
+  "source_break_even_manifest_sha256": "e20efcef5e4e036aeb6c8ea5164b9b2a9e615081b8d3524680c7525252bf7591",
+  "source_cohort_metrics": "artifacts/evidence/break_even_cohort_metrics.csv",
+  "source_cohort_metrics_sha256": "3160c96a648c7de307d08e3abc5aaa91a629acefb085a2ab40332e0cfaccacbf",
+  "source_model_summary": "artifacts/evidence/break_even_model_summary.csv",
+  "source_model_summary_sha256": "037d377a51ecd4ea4996f609e3664d0261eab317d4bd6ee59818eca22cc004cb"
+}
