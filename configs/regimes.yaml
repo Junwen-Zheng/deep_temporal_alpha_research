@@ -1,0 +1,26 @@
+regimes:
+  data_config: "configs/data.yaml"
+  research_config: "configs/research.yaml"
+  evaluation_config: "configs/evaluation.yaml"
+
+  source_oos_metrics: "artifacts/evidence/oos_model_metrics.csv"
+  source_portfolio_cohort_metrics: "artifacts/evidence/portfolio_cohort_metrics.csv"
+  source_portfolio_manifest: "artifacts/evidence/portfolio_run_manifest.json"
+
+  state_window_bars: 12
+
+  lower_quantile: 0.3333333333333333
+  upper_quantile: 0.6666666666666666
+
+  cost_bps:
+    - 0.0
+    - 0.5
+    - 1.0
+
+  focus_cost_bps: 1.0
+
+  expected_symbol_count: 20
+  expected_prediction_rows: 1041840
+  expected_prediction_timestamps: 52092
+
+  evidence_dir: "artifacts/evidence"

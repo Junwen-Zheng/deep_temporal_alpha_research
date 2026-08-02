@@ -1,0 +1,267 @@
+{
+  "aggregate_portfolio_metrics_reproduced": true,
+  "aggregate_prediction_metrics_reproduced": true,
+  "cost_bps": [
+    0.0,
+    0.5,
+    1.0
+  ],
+  "data_config": "configs/data.yaml",
+  "data_config_sha256": "d50f95fb26ba7a1cb66cfb6f80b7463736ada8f000ef4d152c0907a9da544ab1",
+  "evaluation_config": "configs/evaluation.yaml",
+  "evaluation_config_sha256": "c689e74f6bdba0b35b45ee2084652bfc9afa9b53e4499b98308353164ae1a242",
+  "evidence_files": {
+    "artifacts/evidence/regime_assignments.csv": "076bc309641ae5bee797dd2a34d6a2dfad35bfc970db6e16fe8dbb2dc1609bfe",
+    "artifacts/evidence/regime_model_summary.csv": "59b827c5e1a668fcc615d85404df93042343d91a3548db79d5977ad26a742b92",
+    "artifacts/evidence/regime_portfolio_metrics.csv": "75d65b9097a1944025af4d93a8cbdda5b945b29002e2a9601fea99bef3a10e51",
+    "artifacts/evidence/regime_prediction_metrics.csv": "adae0771f3535d07c26d107ac973f71effbf90aa00d924220d009d8b5de2e94b",
+    "artifacts/evidence/regime_thresholds.csv": "ea8e91e7b7d179d6afa93d6132cfda716e7f42c1aa3075b7f979ad75ba46127a"
+  },
+  "focus_cost_bps": 1.0,
+  "folds": [
+    1,
+    2,
+    3
+  ],
+  "holding_bars": 12,
+  "holding_minutes": 60,
+  "lower_quantile": 0.3333333333333333,
+  "models": [
+    "momentum_12",
+    "reversal_12",
+    "ridge",
+    "lightgbm",
+    "mlp",
+    "tcn",
+    "transformer"
+  ],
+  "models_retrained": false,
+  "prediction_files": [
+    {
+      "fold": 1,
+      "model": "lightgbm",
+      "path": "artifacts/predictions/baselines/lightgbm_fold_1_test.parquet",
+      "rows": 339600,
+      "sha256": "ff88d7b75eddb36e804c552a0cc83476e77c5b1d1985e41dd139a84b9dd8ae10",
+      "timestamps": 16980
+    },
+    {
+      "fold": 2,
+      "model": "lightgbm",
+      "path": "artifacts/predictions/baselines/lightgbm_fold_2_test.parquet",
+      "rows": 351120,
+      "sha256": "1632f9d204981ecdc198050f73555e6d468981cd778c113b95d626ac22f5edbc",
+      "timestamps": 17556
+    },
+    {
+      "fold": 3,
+      "model": "lightgbm",
+      "path": "artifacts/predictions/baselines/lightgbm_fold_3_test.parquet",
+      "rows": 351120,
+      "sha256": "d1d4605c6f505b1fb2ebdbe8d4659faf5c1f4df545f24e5211701c2e3e29e48f",
+      "timestamps": 17556
+    },
+    {
+      "fold": 1,
+      "model": "mlp",
+      "path": "artifacts/predictions/neural/mlp_fold_1_test.parquet",
+      "rows": 339600,
+      "sha256": "2466d02344224dd91eecc4c0154b367df8c1c7e4b335b1139675f3aadc1e3021",
+      "timestamps": 16980
+    },
+    {
+      "fold": 2,
+      "model": "mlp",
+      "path": "artifacts/predictions/neural/mlp_fold_2_test.parquet",
+      "rows": 351120,
+      "sha256": "24bb363531f522061146a4b16410082d4c9a795afe2100abbbb2a05695a8a147",
+      "timestamps": 17556
+    },
+    {
+      "fold": 3,
+      "model": "mlp",
+      "path": "artifacts/predictions/neural/mlp_fold_3_test.parquet",
+      "rows": 351120,
+      "sha256": "771894db5afb7159dc93a86b4ff01fc3aea56982d2242eff09390b6d8b799b14",
+      "timestamps": 17556
+    },
+    {
+      "fold": 1,
+      "model": "momentum_12",
+      "path": "artifacts/predictions/baselines/momentum_12_fold_1_test.parquet",
+      "rows": 339600,
+      "sha256": "d093e79315a95c81454ad4fa7c5b2cf3a7fc41c62f4cb38a5a299b06a8987709",
+      "timestamps": 16980
+    },
+    {
+      "fold": 2,
+      "model": "momentum_12",
+      "path": "artifacts/predictions/baselines/momentum_12_fold_2_test.parquet",
+      "rows": 351120,
+      "sha256": "bd45cd7bfa66069bdeebf9e7cb007a00778e71ff949f6f970dcd6f7e19a9c18a",
+      "timestamps": 17556
+    },
+    {
+      "fold": 3,
+      "model": "momentum_12",
+      "path": "artifacts/predictions/baselines/momentum_12_fold_3_test.parquet",
+      "rows": 351120,
+      "sha256": "2fd79ada79d9d1d73f4663d9f0cdda1d4ea0a86b810fa34af68c658d054dd771",
+      "timestamps": 17556
+    },
+    {
+      "fold": 1,
+      "model": "reversal_12",
+      "path": "artifacts/predictions/baselines/reversal_12_fold_1_test.parquet",
+      "rows": 339600,
+      "sha256": "bac2e38e95c3be00d845e96be8e6747d774a7be3adb3c5f902e92d4cc4bd2491",
+      "timestamps": 16980
+    },
+    {
+      "fold": 2,
+      "model": "reversal_12",
+      "path": "artifacts/predictions/baselines/reversal_12_fold_2_test.parquet",
+      "rows": 351120,
+      "sha256": "0562cc4e30eb3329c618eaeec831a3a45b631623c7274fb22cb61c05ddf25ee5",
+      "timestamps": 17556
+    },
+    {
+      "fold": 3,
+      "model": "reversal_12",
+      "path": "artifacts/predictions/baselines/reversal_12_fold_3_test.parquet",
+      "rows": 351120,
+      "sha256": "6db826b56e2284d8370a3d83cc23ae79b63bd87d921f4e78bf77827601254bb1",
+      "timestamps": 17556
+    },
+    {
+      "fold": 1,
+      "model": "ridge",
+      "path": "artifacts/predictions/baselines/ridge_fold_1_test.parquet",
+      "rows": 339600,
+      "sha256": "fdc59586a7a7c7359cdae2b1c40d589e7dc116becd026ac9d928ce4fd6968e71",
+      "timestamps": 16980
+    },
+    {
+      "fold": 2,
+      "model": "ridge",
+      "path": "artifacts/predictions/baselines/ridge_fold_2_test.parquet",
+      "rows": 351120,
+      "sha256": "4fd1de8bd2136929983fd97909353ae7324e18f6218c1e298191fe869c2ac38f",
+      "timestamps": 17556
+    },
+    {
+      "fold": 3,
+      "model": "ridge",
+      "path": "artifacts/predictions/baselines/ridge_fold_3_test.parquet",
+      "rows": 351120,
+      "sha256": "108f60ee9d0553ca8bfcc9dcbbbb6d28cff7f9f8084ec4285b6b39c3487af20d",
+      "timestamps": 17556
+    },
+    {
+      "fold": 1,
+      "model": "tcn",
+      "path": "artifacts/predictions/neural/tcn_fold_1_test.parquet",
+      "rows": 339600,
+      "sha256": "117d2eedde354bba5f8bb836698b527a6d9ed528ebb19102874a461d346cf974",
+      "timestamps": 16980
+    },
+    {
+      "fold": 2,
+      "model": "tcn",
+      "path": "artifacts/predictions/neural/tcn_fold_2_test.parquet",
+      "rows": 351120,
+      "sha256": "df36685f8f7833ff0395e0871c8aa41ebd8e832f9a0c86a97c68277b71a82f2e",
+      "timestamps": 17556
+    },
+    {
+      "fold": 3,
+      "model": "tcn",
+      "path": "artifacts/predictions/neural/tcn_fold_3_test.parquet",
+      "rows": 351120,
+      "sha256": "fd970c540fa5e23a6ee0a94bc4168435f8852bb048a39f73b2faa591040c3b69",
+      "timestamps": 17556
+    },
+    {
+      "fold": 1,
+      "model": "transformer",
+      "path": "artifacts/predictions/neural/transformer_fold_1_test.parquet",
+      "rows": 339600,
+      "sha256": "aecea80588d97cd1fb8f3fc787147f3427e5d9f75ae8e20808dd0cb9c1dcc986",
+      "timestamps": 16980
+    },
+    {
+      "fold": 2,
+      "model": "transformer",
+      "path": "artifacts/predictions/neural/transformer_fold_2_test.parquet",
+      "rows": 351120,
+      "sha256": "a9e15058c5939864845e423f80571ea4b474031a8c591a515a94c6ce8322dcc3",
+      "timestamps": 17556
+    },
+    {
+      "fold": 3,
+      "model": "transformer",
+      "path": "artifacts/predictions/neural/transformer_fold_3_test.parquet",
+      "rows": 351120,
+      "sha256": "d6c2066c217394e80d36e9155567fcb15cb547788fa02d5165dd689d83e9e704",
+      "timestamps": 17556
+    }
+  ],
+  "prediction_rows_per_model": 1041840,
+  "prediction_timestamps_per_model": 52092,
+  "regime_config": "configs/regimes.yaml",
+  "regime_config_sha256": "3ca3027b96ea3df9fce17b40cbe4fcea8cac501b45268acdd6f8f9a841f086c1",
+  "regime_dimensions": {
+    "direction": [
+      "down",
+      "flat",
+      "up"
+    ],
+    "dispersion": [
+      "low",
+      "medium",
+      "high"
+    ],
+    "volatility": [
+      "low",
+      "medium",
+      "high"
+    ]
+  },
+  "regime_thresholds_use_test_data": false,
+  "research_config": "configs/research.yaml",
+  "research_config_sha256": "8fcc869ee0e6921f75ec1cbfc03f2744f62cafffba268641678479dd3aad1888",
+  "schema_version": 1,
+  "source_oos_metrics": "artifacts/evidence/oos_model_metrics.csv",
+  "source_oos_metrics_sha256": "20b3b13b1d48514aa549e43c8ed5786c7cb57f03b6389b7baed98c09b9058525",
+  "source_portfolio_cohort_metrics": "artifacts/evidence/portfolio_cohort_metrics.csv",
+  "source_portfolio_cohort_metrics_sha256": "e3bb42397960d07365dd5e7fb477d06a31b89d2a6344980d3605b9df97b379f7",
+  "source_portfolio_manifest": "artifacts/evidence/portfolio_run_manifest.json",
+  "source_portfolio_manifest_sha256": "ba93c5bc82c508e036364e856d6b2a4d74016a89f369bceecbc71228a8586d98",
+  "state_window_bars": 12,
+  "state_window_minutes": 60,
+  "symbols": [
+    "BTCUSDT",
+    "ETHUSDT",
+    "BNBUSDT",
+    "SOLUSDT",
+    "XRPUSDT",
+    "ADAUSDT",
+    "DOGEUSDT",
+    "AVAXUSDT",
+    "LINKUSDT",
+    "DOTUSDT",
+    "LTCUSDT",
+    "BCHUSDT",
+    "TRXUSDT",
+    "ETCUSDT",
+    "XLMUSDT",
+    "ATOMUSDT",
+    "FILUSDT",
+    "NEARUSDT",
+    "APTUSDT",
+    "ARBUSDT"
+  ],
+  "threshold_calibration_rule": "all available market-state timestamps at or before each fold validation_end",
+  "top_count": 4,
+  "upper_quantile": 0.6666666666666666
+}
