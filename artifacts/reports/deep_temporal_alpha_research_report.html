@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1">
+<title>Deep Temporal Alpha Research</title>
+<style>
+:root {
+  color-scheme: light;
+  --ink: #17202a;
+  --muted: #5d6874;
+  --line: #d9e0e7;
+  --panel: #f6f8fa;
+  --primary: #315b7d;
+  --positive: #4f7896;
+  --negative: #a65d5d;
+  --warning: #8a641f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #ffffff;
+  color: var(--ink);
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  line-height: 1.5;
+}
+
+main {
+  width: min(1240px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 44px 0 72px;
+}
+
+header {
+  border-bottom: 3px solid var(--primary);
+  margin-bottom: 34px;
+  padding-bottom: 22px;
+}
+
+h1 {
+  font-size: 2.25rem;
+  line-height: 1.12;
+  margin: 0 0 8px;
+}
+
+.subtitle {
+  color: var(--muted);
+  font-size: 1.08rem;
+  margin: 0;
+}
+
+.metadata {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-top: 14px;
+}
+
+section {
+  margin-top: 42px;
+}
+
+h2 {
+  border-bottom: 1px solid var(--line);
+  font-size: 1.45rem;
+  padding-bottom: 8px;
+}
+
+h3 {
+  font-size: 1.1rem;
+  margin-top: 30px;
+}
+
+.callout {
+  background: var(--panel);
+  border-left: 5px solid var(--primary);
+  padding: 18px 20px;
+}
+
+.callout.warning {
+  border-left-color: var(--warning);
+}
+
+.grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns:
+    repeat(auto-fit, minmax(440px, 1fr));
+}
+
+.chart-panel {
+  border: 1px solid var(--line);
+  overflow-x: auto;
+  padding: 14px;
+}
+
+.bar-chart {
+  display: block;
+  min-width: 760px;
+  width: 100%;
+}
+
+.chart-title {
+  fill: var(--ink);
+  font-size: 17px;
+  font-weight: 650;
+}
+
+.chart-label,
+.chart-value {
+  fill: var(--ink);
+  font-size: 13px;
+}
+
+.zero-line {
+  stroke: #8a949e;
+  stroke-width: 1;
+}
+
+.positive-bar {
+  fill: var(--positive);
+}
+
+.negative-bar {
+  fill: var(--negative);
+}
+
+table {
+  border-collapse: collapse;
+  display: block;
+  font-size: 0.82rem;
+  overflow-x: auto;
+  width: 100%;
+}
+
+th,
+td {
+  border: 1px solid var(--line);
+  padding: 7px 9px;
+  text-align: right;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+th {
+  background: var(--panel);
+  font-weight: 650;
+}
+
+th:first-child,
+td:first-child {
+  text-align: left;
+}
+
+.inventory-table {
+  font-family:
+    ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    monospace;
+  font-size: 0.72rem;
+}
+
+.inventory-table td:first-child {
+  max-width: 460px;
+  white-space: normal;
+}
+
+.inventory-table td:last-child {
+  font-size: 0.67rem;
+}
+
+footer {
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.82rem;
+  margin-top: 50px;
+  padding-top: 18px;
+}
+
+code {
+  background: var(--panel);
+  padding: 1px 4px;
+}
+
+@media print {
+  main {
+    width: 100%;
+    padding: 0;
+  }
+
+  section {
+    break-inside: avoid;
+  }
+}
+</style>
+</head>
+<body>
+<main>
+<header>
+  <h1>Deep Temporal Alpha Research</h1>
+  <p class="subtitle">Deterministic out-of-sample evidence report through Milestone 21</p>
+  <p class="metadata">
+    Report version 1 ·
+    Evidence through Milestone 21 ·
+    Focus transaction cost 1 bps
+  </p>
+</header>
+
+<section id="executive-conclusion">
+  <h2>Executive conclusion</h2>
+  <div class="callout">
+    <strong>Primary result:</strong>
+    The frozen experiment contains statistically persistent
+    cross-sectional ranking information, but no frozen model supports
+    a one-basis-point transaction-cost assumption. The simple
+    reversal reference remains stronger than every learned model.
+  </div>
+  <p>
+    Several learned models have block-bootstrap Rank IC intervals
+    above zero. That predictive evidence does not translate into
+    sufficiently high break-even transaction costs. The distinction
+    between ranking accuracy and economically usable turnover-adjusted
+    return is central to this report.
+  </p>
+  <div class="callout warning">
+    <strong>Exploratory exception:</strong>
+    a reduced-feature LightGBM variant exceeds one basis point after
+    removing calendar features. This variant was identified through
+    post-hoc test-sample comparison and has not received independent
+    holdout, bootstrap, monthly, regime, or symbol-dependence
+    confirmation. It is a follow-up hypothesis, not a revised primary
+    conclusion.
+  </div>
+</section>
+
+<section id="key-findings">
+  <h2>Key findings</h2>
+  <table class="data-table"><thead><tr><th>Status</th><th>Category</th><th>Finding</th><th>Model</th><th>Variant</th><th>Value</th><th>Unit</th><th>Interpretation</th></tr></thead><tbody><tr><td>primary</td><td>predictive</td><td>Highest frozen out-of-sample Rank IC</td><td>reversal_12</td><td></td><td>0.044067</td><td>Rank IC</td><td>The non-learned reversal reference remains the strongest predictive benchmark.</td></tr><tr><td>primary</td><td>model_family</td><td>Highest learned-model out-of-sample Rank IC</td><td>transformer</td><td>neural_temporal_attention</td><td>0.016834</td><td>Rank IC</td><td>Temporal attention improves upon the pointwise MLP but does not surpass reversal.</td></tr><tr><td>primary</td><td>economics</td><td>Highest frozen pooled break-even cost</td><td>reversal_12</td><td></td><td>0.602194</td><td>bps</td><td>The strongest frozen result remains below the 1 bps focus cost.</td></tr><tr><td>primary</td><td>uncertainty</td><td>Models with primary Rank IC interval above zero</td><td>lightgbm,mlp,reversal_12,ridge,transformer</td><td>60-minute circular blocks</td><td>5.000000</td><td>models</td><td>Predictive evidence is broader than economic evidence.</td></tr><tr><td>primary</td><td>uncertainty</td><td>Highest bootstrap frequency of break-even above focus cost</td><td>lightgbm</td><td>24-hour cohort blocks</td><td>0.028000</td><td>frequency</td><td>The empirical frequency remains too small to support the focus transaction-cost assumption.</td></tr><tr><td>exploratory</td><td>exploratory_ablation</td><td>Highest reduced-feature break-even cost</td><td>lightgbm</td><td>without_calendar</td><td>1.583378</td><td>bps</td><td>This post-hoc feature variant requires independent validation and cannot replace the frozen primary result.</td></tr><tr><td>exploratory</td><td>exploratory_ablation</td><td>One-basis-point annualized return of best reduced variant</td><td>lightgbm</td><td>without_calendar</td><td>0.126664</td><td>log return/year</td><td>Positive simulated return is not confirmatory because the variant was inspected on the same test sample.</td></tr></tbody></table>
+</section>
+
+<section id="research-design">
+  <h2>Research design</h2>
+  <p>
+    The study uses a fixed universe of twenty Binance perpetual-futures
+    contracts, five-minute public OHLCV data, causal point-in-time
+    features, a demeaned sixty-minute cross-sectional return target,
+    three purged walk-forward folds, and validation-only model
+    selection.
+  </p>
+  <p>
+    Portfolio evaluation enters at the next bar open, exits after
+    twelve five-minute bars, holds the top four and bottom four
+    contracts with zero net and unit gross exposure, and separates the
+    overlapping horizon into twelve non-overlapping hourly cohorts.
+    Transaction cost is modelled as one-way basis points multiplied by
+    turnover.
+  </p>
+</section>
+
+<section id="model-evidence">
+  <h2>Frozen model evidence</h2>
+  <div class="grid">
+    <div class="chart-panel"><svg class="bar-chart" viewBox="0 0 790 290" role="img" aria-label="Frozen out-of-sample mean Rank IC"><text x="0" y="22" class="chart-title">Frozen out-of-sample mean Rank IC</text><line x1="410.000" y1="38" x2="410.000" y2="282" class="zero-line"/><text x="0" y="65" class="chart-label">reversal_12</text><rect x="410.000" y="48" width="260.000" height="20" class="positive-bar"/><text x="682" y="64" class="chart-value">0.0441</text><text x="0" y="99" class="chart-label">transformer</text><rect x="410.000" y="82" width="99.320" height="20" class="positive-bar"/><text x="682" y="98" class="chart-value">0.0168</text><text x="0" y="133" class="chart-label">lightgbm</text><rect x="410.000" y="116" width="79.871" height="20" class="positive-bar"/><text x="682" y="132" class="chart-value">0.0135</text><text x="0" y="167" class="chart-label">mlp</text><rect x="410.000" y="150" width="66.595" height="20" class="positive-bar"/><text x="682" y="166" class="chart-value">0.0113</text><text x="0" y="201" class="chart-label">ridge</text><rect x="410.000" y="184" width="57.307" height="20" class="positive-bar"/><text x="682" y="200" class="chart-value">0.0097</text><text x="0" y="235" class="chart-label">tcn</text><rect x="410.000" y="218" width="9.507" height="20" class="positive-bar"/><text x="682" y="234" class="chart-value">0.0016</text><text x="0" y="269" class="chart-label">momentum_12</text><rect x="150.000" y="252" width="260.000" height="20" class="negative-bar"/><text x="682" y="268" class="chart-value">-0.0441</text></svg></div>
+    <div class="chart-panel"><svg class="bar-chart" viewBox="0 0 790 290" role="img" aria-label="Frozen pooled break-even transaction cost"><text x="0" y="22" class="chart-title">Frozen pooled break-even transaction cost</text><line x1="410.000" y1="38" x2="410.000" y2="282" class="zero-line"/><text x="0" y="65" class="chart-label">reversal_12</text><rect x="410.000" y="48" width="259.612" height="20" class="positive-bar"/><text x="682" y="64" class="chart-value">0.6022 bps</text><text x="0" y="99" class="chart-label">transformer</text><rect x="410.000" y="82" width="116.389" height="20" class="positive-bar"/><text x="682" y="98" class="chart-value">0.2700 bps</text><text x="0" y="133" class="chart-label">lightgbm</text><rect x="410.000" y="116" width="179.223" height="20" class="positive-bar"/><text x="682" y="132" class="chart-value">0.4157 bps</text><text x="0" y="167" class="chart-label">mlp</text><rect x="410.000" y="150" width="22.723" height="20" class="positive-bar"/><text x="682" y="166" class="chart-value">0.0527 bps</text><text x="0" y="201" class="chart-label">ridge</text><rect x="410.000" y="184" width="135.276" height="20" class="positive-bar"/><text x="682" y="200" class="chart-value">0.3138 bps</text><text x="0" y="235" class="chart-label">tcn</text><rect x="391.257" y="218" width="18.743" height="20" class="negative-bar"/><text x="682" y="234" class="chart-value">-0.0435 bps</text><text x="0" y="269" class="chart-label">momentum_12</text><rect x="150.000" y="252" width="260.000" height="20" class="negative-bar"/><text x="682" y="268" class="chart-value">-0.6031 bps</text></svg></div>
+  </div>
+  <h3>Predictive, economic, and uncertainty metrics</h3>
+  <table class="data-table"><thead><tr><th>Model</th><th>Mean Rank Ic</th><th>Rank Ic Ci Lower</th><th>Rank Ic Ci Upper</th><th>Rank Ic Ir</th><th>Pooled Break Even Cost Bps</th><th>Break Even Confidence Lower</th><th>Break Even Confidence Upper</th><th>Probability Break Even Above Focus Cost</th><th>Mean Turnover</th><th>Undefined Timestamp Count</th></tr></thead><tbody><tr><td>reversal_12</td><td>0.044067</td><td>0.037966</td><td>0.050103</td><td>0.142118</td><td>0.602194</td><td>0.457295</td><td>0.746518</td><td>0.000000</td><td>1.557816</td><td>0</td></tr><tr><td>transformer</td><td>0.016834</td><td>0.010140</td><td>0.023157</td><td>0.051592</td><td>0.269976</td><td>0.091464</td><td>0.447659</td><td>0.000000</td><td>1.008931</td><td>0</td></tr><tr><td>lightgbm</td><td>0.013537</td><td>0.005573</td><td>0.021947</td><td>0.043293</td><td>0.415724</td><td>-0.155885</td><td>1.011940</td><td>0.028000</td><td>0.335066</td><td>15,455</td></tr><tr><td>mlp</td><td>0.011287</td><td>0.007565</td><td>0.015272</td><td>0.042864</td><td>0.052707</td><td>-0.056247</td><td>0.158729</td><td>0.000000</td><td>1.486197</td><td>0</td></tr><tr><td>ridge</td><td>0.009713</td><td>0.004639</td><td>0.014596</td><td>0.033338</td><td>0.313786</td><td>0.178198</td><td>0.443235</td><td>0.000000</td><td>1.393175</td><td>0</td></tr><tr><td>tcn</td><td>0.001611</td><td>-0.002741</td><td>0.005474</td><td>0.005952</td><td>-0.043475</td><td>-0.157002</td><td>0.065028</td><td>0.000000</td><td>1.409612</td><td>0</td></tr><tr><td>momentum_12</td><td>-0.044067</td><td>-0.050347</td><td>-0.038278</td><td>-0.142118</td><td>-0.603095</td><td>-0.736021</td><td>-0.465719</td><td>0.000000</td><td>1.557941</td><td>0</td></tr></tbody></table>
+</section>
+
+<section id="horizon">
+  <h2>Holding-horizon sensitivity</h2>
+  <p>
+    Frozen sixty-minute-trained forecasts were transferred to
+    alternative holding horizons without retraining. This is a signal
+    decay audit rather than horizon-specific model optimization.
+  </p>
+  <table class="data-table"><thead><tr><th>Horizon Minutes</th><th>Model</th><th>Pooled Break Even Cost Bps</th><th>Worst Individual Break Even Cost Bps</th><th>Mean Zero Cost Sharpe</th></tr></thead><tbody><tr><td>15</td><td>reversal_12</td><td>0.583024</td><td>0.500818</td><td>7.471980</td></tr><tr><td>30</td><td>reversal_12</td><td>0.694750</td><td>0.575582</td><td>6.186362</td></tr><tr><td>60</td><td>reversal_12</td><td>0.602194</td><td>0.426940</td><td>3.752546</td></tr><tr><td>120</td><td>lightgbm</td><td>0.784819</td><td>-1.021440</td><td>0.642156</td></tr></tbody></table>
+</section>
+
+<section id="temporal-stability">
+  <h2>Fold and monthly stability</h2>
+  <p>
+    Positive Rank IC is persistent for several models, but positive
+    one-basis-point monthly performance is rare. Monthly results use
+    linear return quantities rather than treating overlapping sleeves
+    as independent Sharpe observations.
+  </p>
+  <table class="data-table"><thead><tr><th>Model</th><th>Worst Fold Rank Ic</th><th>Worst Month Rank Ic</th><th>Positive Month Rank Ic Fraction</th><th>Worst Month Break Even Cost Bps</th><th>Positive Month Fraction At Focus Cost</th></tr></thead><tbody><tr><td>reversal_12</td><td>0.037463</td><td>0.027608</td><td>1.000000</td><td>0.047188</td><td>0.166667</td></tr><tr><td>ridge</td><td>0.004796</td><td>0.003175</td><td>1.000000</td><td>0.029941</td><td>0.000000</td></tr><tr><td>transformer</td><td>0.003663</td><td>0.001742</td><td>1.000000</td><td>-0.278171</td><td>0.166667</td></tr><tr><td>mlp</td><td>0.004457</td><td>0.001232</td><td>1.000000</td><td>-0.603945</td><td>0.000000</td></tr><tr><td>tcn</td><td>-0.002542</td><td>-0.004670</td><td>0.666667</td><td>-0.389981</td><td>0.000000</td></tr><tr><td>lightgbm</td><td>0.007688</td><td>-0.008389</td><td>0.666667</td><td>-9.649745</td><td>0.333333</td></tr><tr><td>momentum_12</td><td>-0.055276</td><td>-0.057326</td><td>0.000000</td><td>-1.103148</td><td>0.000000</td></tr></tbody></table>
+</section>
+
+<section id="symbol-dependence">
+  <h2>Symbol dependence</h2>
+  <p>
+    Leave-one-symbol-out tests show that the predictive ordering is not
+    generated by a single contract. They do not remove fixed-universe
+    survivorship bias.
+  </p>
+  <table class="data-table"><thead><tr><th>Model</th><th>Worst Exclusion Rank Ic</th><th>Maximum Absolute Rank Ic Delta</th><th>Worst Exclusion Break Even Cost Bps</th><th>Largest Absolute Contribution Share</th><th>Top Three Absolute Contribution Share</th></tr></thead><tbody><tr><td>reversal_12</td><td>0.042843</td><td>0.001948</td><td>0.511026</td><td>0.194191</td><td>0.361067</td></tr><tr><td>transformer</td><td>0.015783</td><td>0.001345</td><td>0.204471</td><td>0.175305</td><td>0.429665</td></tr><tr><td>lightgbm</td><td>0.012649</td><td>0.001999</td><td>0.135674</td><td>0.156349</td><td>0.365713</td></tr><tr><td>mlp</td><td>0.010440</td><td>0.000847</td><td>0.017235</td><td>0.172944</td><td>0.418138</td></tr><tr><td>ridge</td><td>0.008434</td><td>0.001724</td><td>0.172435</td><td>0.177856</td><td>0.388361</td></tr><tr><td>tcn</td><td>0.000709</td><td>0.001087</td><td>-0.086525</td><td>0.158141</td><td>0.404560</td></tr><tr><td>momentum_12</td><td>-0.046015</td><td>0.001948</td><td>-0.642746</td><td>0.196041</td><td>0.361855</td></tr></tbody></table>
+</section>
+
+<section id="regimes">
+  <h2>Causal market regimes</h2>
+  <p>
+    Regime thresholds are calibrated using only information available
+    by each fold's validation boundary. Reversal is the only model
+    whose Rank IC remains positive in every tested fold-regime cell.
+  </p>
+  <table class="data-table"><thead><tr><th>Model</th><th>Worst Regime Rank Ic</th><th>Minimum Positive Rank Ic Cell Fraction</th><th>Worst Regime Break Even Cost Bps</th><th>Maximum Positive Regime Fraction At Focus Cost</th></tr></thead><tbody><tr><td>reversal_12</td><td>0.027399</td><td>1.000000</td><td>-0.176932</td><td>0.111111</td></tr><tr><td>mlp</td><td>-0.003903</td><td>0.888889</td><td>-0.965822</td><td>0.000000</td></tr><tr><td>ridge</td><td>-0.006027</td><td>0.666667</td><td>-0.211304</td><td>0.000000</td></tr><tr><td>tcn</td><td>-0.009415</td><td>0.444444</td><td>-0.521360</td><td>0.000000</td></tr><tr><td>transformer</td><td>-0.012302</td><td>0.888889</td><td>-0.532244</td><td>0.333333</td></tr><tr><td>lightgbm</td><td>-0.016785</td><td>0.888889</td><td>-8.513109</td><td>0.555556</td></tr><tr><td>momentum_12</td><td>-0.059668</td><td>0.000000</td><td>-1.251115</td><td>0.000000</td></tr></tbody></table>
+</section>
+
+<section id="ablations">
+  <h2>Feature-family ablations</h2>
+  <p>
+    Ridge and LightGBM were retrained after removing returns,
+    range/volatility, activity/flow, or calendar features. Full-feature
+    controls reproduce the original frozen evidence. Reduced-feature
+    rows are exploratory because multiple variants were inspected on
+    the same test sample.
+  </p>
+  <table class="data-table"><thead><tr><th>Model</th><th>Variant</th><th>Feature Count</th><th>Mean Rank Ic</th><th>Mean Rank Ic Delta Vs Full</th><th>Worst Fold Rank Ic</th><th>Pooled Break Even Cost Bps</th><th>Pooled Break Even Cost Bps Delta Vs Full</th><th>Pooled Annualized Net Return At Focus Cost</th></tr></thead><tbody><tr><td>lightgbm</td><td>without_returns</td><td>12</td><td>0.021907</td><td>0.008370</td><td>0.019049</td><td>0.318410</td><td>-0.097315</td><td>-0.185588</td></tr><tr><td>lightgbm</td><td>without_calendar</td><td>12</td><td>0.021728</td><td>0.008191</td><td>0.016420</td><td>1.583378</td><td>1.167654</td><td>0.126664</td></tr><tr><td>lightgbm</td><td>without_activity_flow</td><td>12</td><td>0.013680</td><td>0.000143</td><td>0.006951</td><td>0.412800</td><td>-0.002925</td><td>-0.234729</td></tr><tr><td>lightgbm</td><td>full</td><td>16</td><td>0.013537</td><td>0.000000</td><td>0.007688</td><td>0.415724</td><td>0.000000</td><td>-0.171495</td></tr><tr><td>lightgbm</td><td>without_range_volatility</td><td>12</td><td>0.013487</td><td>-0.000050</td><td>0.002602</td><td>0.688099</td><td>0.272375</td><td>-0.124578</td></tr><tr><td>ridge</td><td>without_range_volatility</td><td>12</td><td>0.032334</td><td>0.022621</td><td>0.026171</td><td>0.493553</td><td>0.179767</td><td>-0.675268</td></tr><tr><td>ridge</td><td>without_activity_flow</td><td>12</td><td>0.019481</td><td>0.009768</td><td>0.013059</td><td>0.379192</td><td>0.065407</td><td>-0.689880</td></tr><tr><td>ridge</td><td>without_calendar</td><td>12</td><td>0.010126</td><td>0.000413</td><td>0.005262</td><td>0.313999</td><td>0.000213</td><td>-0.840062</td></tr><tr><td>ridge</td><td>full</td><td>16</td><td>0.009713</td><td>0.000000</td><td>0.004796</td><td>0.313786</td><td>0.000000</td><td>-0.837470</td></tr><tr><td>ridge</td><td>without_returns</td><td>12</td><td>-0.001784</td><td>-0.011497</td><td>-0.004410</td><td>0.079941</td><td>-0.233845</td><td>-1.059943</td></tr></tbody></table>
+</section>
+
+<section id="limitations">
+  <h2>Limitations</h2>
+  <ul>
+    <li>
+      The universe is fixed ex post and therefore subject to
+      survivorship and selection bias.
+    </li>
+    <li>
+      Public OHLCV simulation does not model queue position, latency,
+      market impact, adverse selection, partial fills, funding, or
+      exchange-specific execution failure.
+    </li>
+    <li>
+      Break-even cost is a simplified one-way threshold, not an
+      achievable live execution estimate.
+    </li>
+    <li>
+      Feature-ablation improvements are test-sample hypotheses and
+      require a new untouched evaluation period.
+    </li>
+    <li>
+      Bootstrap intervals address sampling dependence within the
+      observed period, not future structural change.
+    </li>
+  </ul>
+</section>
+
+<section id="evidence-inventory">
+  <h2>Evidence inventory</h2>
+  <p>
+    Every listed source file is identified by byte size and SHA-256.
+    The report contains no external stylesheet, script, image, font,
+    or network dependency.
+  </p>
+  <table class="inventory-table"><thead><tr><th>Path</th><th>Bytes</th><th>Sha256</th></tr></thead><tbody><tr><td>README.md</td><td>7,788</td><td>dbbb4a55739b470883903fdc11d05cb0f04554eb8c8c354af27542f217c4fff2</td></tr><tr><td>artifacts/evidence/ablation_feature_fold_metrics.csv</td><td>10,461</td><td>66132e8048aa903e0d39d656822816d957c5e858d8571c097543d08d558a3830</td></tr><tr><td>artifacts/evidence/ablation_feature_summary.csv</td><td>7,269</td><td>2a3c9220f55118e30be0ac34cee7316367e3ce729dcfb3db9afc3034def49c49</td></tr><tr><td>artifacts/evidence/ablation_manifest.json</td><td>6,094</td><td>e4facf0c799139560f7015c97437a3ba538b7c7f8def9b0a44a2bdbf38f97d20</td></tr><tr><td>artifacts/evidence/ablation_model_family_summary.csv</td><td>2,750</td><td>2f9244e1674ecc64e80d01035ba1f6e72ac5d451288b869bdf92ee7ef34ff1a8</td></tr><tr><td>artifacts/evidence/ablation_model_selection.csv</td><td>6,001</td><td>e2f2a20590a88619b1726111cfcde6038fb5e1a79868c046eaab09736925c27a</td></tr><tr><td>artifacts/evidence/ablation_portfolio_cohort_metrics.csv</td><td>93,256</td><td>4849cbb07a73369dc18f9ed9ac0f911eede79127b518ec4a1b002de5d460d5fc</td></tr><tr><td>artifacts/evidence/alignment_audit_manifest.json</td><td>6,868</td><td>367d6c0e95580a7194007917f032db42addd2810409d7ef2fc18141e08949b09</td></tr><tr><td>artifacts/evidence/alignment_prediction_metrics.csv</td><td>3,457</td><td>87e8086e4b55a00d50fa89800163c190900c1b126487e9662756c28b76f09cff</td></tr><tr><td>artifacts/evidence/alignment_split_metrics.csv</td><td>1,462</td><td>f2957123ccc2085cb17cf40d726af16bd467814cb77b6fe9560b74d1c2cdae0f</td></tr><tr><td>artifacts/evidence/alignment_summary.json</td><td>703</td><td>f582cc5e64dc0850004fdb9c0ac99c36749d0b4a16a7f75dac223be49e4ba94b</td></tr><tr><td>artifacts/evidence/alignment_symbol_metrics.csv</td><td>3,259</td><td>4ff0e63921db81d86fb2e8deddfc28aa4ffb8ceae8dcba0a05a5a43983528552</td></tr><tr><td>artifacts/evidence/baseline_fold_metrics.csv</td><td>3,583</td><td>84195eed13a0cda9da2585943a57a1afb603e9bd956d525e5361293f4cab4b80</td></tr><tr><td>artifacts/evidence/baseline_model_selection.csv</td><td>542</td><td>37ece634a26b30aad19b3255e9048012f1aab095e9b0e61da9d6881ad71a0620</td></tr><tr><td>artifacts/evidence/baseline_run_manifest.json</td><td>12,945</td><td>1521c45a451a3eb6c789e59ba54c8f0d981a2a803fddc8bc51a6c0f901fff96d</td></tr><tr><td>artifacts/evidence/baseline_summary.csv</td><td>1,251</td><td>fd072f60d666c42d27abfa340a0a361239f769c7da9d6e8e826c92910643e05c</td></tr><tr><td>artifacts/evidence/bootstrap_manifest.json</td><td>8,573</td><td>f2016748d3147967f2f87c45e3ae19d6813d097e37d094ff10b5400f4d2b6bf5</td></tr><tr><td>artifacts/evidence/bootstrap_portfolio_distribution.csv</td><td>2,446,916</td><td>012103bc85bef1910c90c3d407d2860c753c457e21b03c5255ea990a33514035</td></tr><tr><td>artifacts/evidence/bootstrap_portfolio_summary.csv</td><td>7,566</td><td>3d89a82f70b6aef2a26c4175fb400fc773314c240a66f941085769c446b3f83a</td></tr><tr><td>artifacts/evidence/bootstrap_prediction_distribution.csv</td><td>743,073</td><td>5e408fac0b40f752bfb6b56e7a558151c393abcfb91d50c9ca71ee92e6920c3e</td></tr><tr><td>artifacts/evidence/bootstrap_prediction_summary.csv</td><td>2,860</td><td>9e359af1b71023ffa696dd8cdf6118dbfebfad00cbfe08aac6cf448de2a94298</td></tr><tr><td>artifacts/evidence/breadth_break_even.csv</td><td>9,737</td><td>938691a12ca007b14356ce0d17bcdf4bb0d4054b45ffb39b55713ce2b205ae5d</td></tr><tr><td>artifacts/evidence/breadth_cohort_metrics.csv</td><td>606,308</td><td>911ab25464932d54c04dd96fb9c18b482e2419fd65600f23b0dd7f19803af0fe</td></tr><tr><td>artifacts/evidence/breadth_sensitivity_manifest.json</td><td>7,125</td><td>444d0958ef90e123dd06edd520a7b85735581fead5918f912609c4adc4e6d6a1</td></tr><tr><td>artifacts/evidence/breadth_summary.csv</td><td>80,797</td><td>27390591875c6401495ba69d6c02d43816e2b407d4d42806f448fd84220a5719</td></tr><tr><td>artifacts/evidence/break_even_cohort_metrics.csv</td><td>9,532</td><td>3160c96a648c7de307d08e3abc5aaa91a629acefb085a2ab40332e0cfaccacbf</td></tr><tr><td>artifacts/evidence/break_even_cost_curve.csv</td><td>156,725</td><td>47fd4688ee52566729ca4f9919e7629fc2452e50637a0459a5922072f93b7a71</td></tr><tr><td>artifacts/evidence/break_even_model_summary.csv</td><td>2,158</td><td>037d377a51ecd4ea4996f609e3664d0261eab317d4bd6ee59818eca22cc004cb</td></tr><tr><td>artifacts/evidence/break_even_run_manifest.json</td><td>1,769</td><td>e20efcef5e4e036aeb6c8ea5164b9b2a9e615081b8d3524680c7525252bf7591</td></tr><tr><td>artifacts/evidence/horizon_break_even.csv</td><td>5,027</td><td>b80bc43f820b1f7d2335e46bddd089c219b357c885f6a3b8613cc3d774d32577</td></tr><tr><td>artifacts/evidence/horizon_fold_metrics.csv</td><td>11,997</td><td>6060e41e397cc384f62e0c3c9313fbd750bbf1a847cc28b84355f7d361d2bdf8</td></tr><tr><td>artifacts/evidence/horizon_model_metrics.csv</td><td>4,061</td><td>07ab1b83773f402fc55a93a7312640da6fe1aa1631cbb6e49d5525b4b4572b5e</td></tr><tr><td>artifacts/evidence/horizon_portfolio_cohort_metrics.csv</td><td>293,899</td><td>d3890389db33213c55281f2eab86dfce717f190c64b3ce0877917b31857789cf</td></tr><tr><td>artifacts/evidence/horizon_portfolio_summary.csv</td><td>40,563</td><td>9729054b8eb1eec66c30e6875f156b10e626855a81438404fd02ae96b9a6f6f6</td></tr><tr><td>artifacts/evidence/horizon_sensitivity_manifest.json</td><td>8,293</td><td>d56d547a72a66bbb93e43541ab93a442cf4dc595788b88825828087327c3d61c</td></tr><tr><td>artifacts/evidence/mlp_fold_metrics.csv</td><td>957</td><td>acabf947a32acd48a8648605aa69d2451f8e037602aee495b208a313a151b707</td></tr><tr><td>artifacts/evidence/mlp_run_manifest.json</td><td>8,540</td><td>58887dd13d1d21a62dfcb657e4996f27fdacb9c4c58612c89759f8097ebfcbd7</td></tr><tr><td>artifacts/evidence/mlp_summary.csv</td><td>412</td><td>38066a43031fda7e63f375b5f43967ff5b0b2a0bb98c73257d62741a5e4d4a54</td></tr><tr><td>artifacts/evidence/mlp_training_history.csv</td><td>1,542</td><td>46d180cd56ef5aa61157f6edb13730561791a417ff5bc9cd86a262c0b8a2068e</td></tr><tr><td>artifacts/evidence/null_alignment_checks.json</td><td>571</td><td>fe5dc5b7289105684dacb7a16d7349bb1b02280d3fd2f0113ffcf1d5d02efbd3</td></tr><tr><td>artifacts/evidence/null_observed_fold_metrics.csv</td><td>727</td><td>156724f4eb2a9d1f9f7cedc4f6f9cffbf320824f71448fa9fcd05bb683edd8fc</td></tr><tr><td>artifacts/evidence/null_permutation_metrics.csv</td><td>12,398</td><td>3e2a0c8625df5223ecf5770cf9dab4df68895188b88286420a7a8438de1bdd0b</td></tr><tr><td>artifacts/evidence/null_test_manifest.json</td><td>6,992</td><td>4bf81c80598ad3db2987965d2651103513194842ab6daf88d489e8e85c345193</td></tr><tr><td>artifacts/evidence/null_test_summary.csv</td><td>1,107</td><td>193a557d2ad97b13e7a4233f0c4819e9f429cae5ba64f86031eb18e09f066a8c</td></tr><tr><td>artifacts/evidence/null_time_shift_metrics.csv</td><td>5,586</td><td>c4a123a019342dcba96a66f6ccbbd954436df8e978093c74070bde4aa5270b43</td></tr><tr><td>artifacts/evidence/oos_model_metrics.csv</td><td>1,052</td><td>20b3b13b1d48514aa549e43c8ed5786c7cb57f03b6389b7baed98c09b9058525</td></tr><tr><td>artifacts/evidence/portfolio_cohort_metrics.csv</td><td>52,876</td><td>e3bb42397960d07365dd5e7fb477d06a31b89d2a6344980d3605b9df97b379f7</td></tr><tr><td>artifacts/evidence/portfolio_model_comparison.csv</td><td>2,134</td><td>ec6e063b62275cd6771b5ae76f59e00b0a177bfd1c03eff8e5ca979ea42e078b</td></tr><tr><td>artifacts/evidence/portfolio_run_manifest.json</td><td>6,498</td><td>ba93c5bc82c508e036364e856d6b2a4d74016a89f369bceecbc71228a8586d98</td></tr><tr><td>artifacts/evidence/portfolio_summary.csv</td><td>6,176</td><td>4756e473349339a54691b415f07307901d05be71b12eb7ab19f4f4a3c7c03d53</td></tr><tr><td>artifacts/evidence/rebalance_cadence_summary.csv</td><td>23,242</td><td>18464bc56895be76e81573687fad379f864332248d440cc698bb972ecb6813fa</td></tr><tr><td>artifacts/evidence/rebalance_phase_map.csv</td><td>588</td><td>6d194ed16d8c54f4bcf62fbf62f4bade4e6417846691dabc67545fa334e6e402</td></tr><tr><td>artifacts/evidence/rebalance_phase_metrics.csv</td><td>168,849</td><td>ac26f99e51d2607ea88eb6ed4588e731b5048ac43d434baf65e9f54257e6b13a</td></tr><tr><td>artifacts/evidence/rebalance_sensitivity_manifest.json</td><td>1,854</td><td>c57ec1349c360d14524ae1125d06b4bd7e2df4e809906f5a67e819c698a93689</td></tr><tr><td>artifacts/evidence/regime_assignments.csv</td><td>4,901,214</td><td>076bc309641ae5bee797dd2a34d6a2dfad35bfc970db6e16fe8dbb2dc1609bfe</td></tr><tr><td>artifacts/evidence/regime_manifest.json</td><td>8,709</td><td>20e6e36409add436cb94643a01a2216fbe85e28fd4dbd1aece9fe421c63383fb</td></tr><tr><td>artifacts/evidence/regime_model_summary.csv</td><td>4,489</td><td>59b827c5e1a668fcc615d85404df93042343d91a3548db79d5977ad26a742b92</td></tr><tr><td>artifacts/evidence/regime_portfolio_metrics.csv</td><td>122,052</td><td>75d65b9097a1944025af4d93a8cbdda5b945b29002e2a9601fea99bef3a10e51</td></tr><tr><td>artifacts/evidence/regime_prediction_metrics.csv</td><td>28,461</td><td>adae0771f3535d07c26d107ac973f71effbf90aa00d924220d009d8b5de2e94b</td></tr><tr><td>artifacts/evidence/regime_thresholds.csv</td><td>859</td><td>ea8e91e7b7d179d6afa93d6132cfda716e7f42c1aa3075b7f979ad75ba46127a</td></tr><tr><td>artifacts/evidence/sequence_dataset_manifest.json</td><td>5,161</td><td>37a78ee3747eb4b3abaa6096687ee12df666402b6217eb2d9bbc99629d96777d</td></tr><tr><td>artifacts/evidence/stability_fold_portfolio_metrics.csv</td><td>12,908</td><td>4b4d15f36a56e07477b18700c94788cde136cefb7dc6cec6b7579d60c2978e95</td></tr><tr><td>artifacts/evidence/stability_fold_prediction_metrics.csv</td><td>2,969</td><td>543a8ea8f411b2743963c252bd851fe425494cd372fd635977bf3b6d14a51503</td></tr><tr><td>artifacts/evidence/stability_manifest.json</td><td>8,271</td><td>cea30514766c88c6bd88792c83cdd9b72a47c9e3d8c719d6cc2ce4c9c3b24abf</td></tr><tr><td>artifacts/evidence/stability_model_summary.csv</td><td>2,759</td><td>71618f17424654e21df9264a2daee80f2c2b30c3a2b4c8d0357b2eb4eb51701d</td></tr><tr><td>artifacts/evidence/stability_month_portfolio_metrics.csv</td><td>26,334</td><td>d29f47039226354a49b82aecbb41c475be2f075a0b68f2609627e66d56061282</td></tr><tr><td>artifacts/evidence/stability_month_prediction_metrics.csv</td><td>6,094</td><td>af40134f11bfc5fb6c68cc1166dd25b17cc770f2c266815208521560c3ce96ca</td></tr><tr><td>artifacts/evidence/symbol_contribution_metrics.csv</td><td>25,979</td><td>f158ac23db0bf9be27a911b963926c6f43838e8a4c75619868510fea68180819</td></tr><tr><td>artifacts/evidence/symbol_dependence_manifest.json</td><td>8,462</td><td>7a599db47c6c4d2b6867affcc5a82693757cf09537bf27adcdb8a1bef7b4b3aa</td></tr><tr><td>artifacts/evidence/symbol_dependence_model_summary.csv</td><td>2,379</td><td>fa196dca27c53ca8579b5677202f988e7e6e47fdac40ae4ccef20fbae5b45e89</td></tr><tr><td>artifacts/evidence/symbol_exclusion_portfolio_cohort_metrics.csv</td><td>451,070</td><td>bcbcdb8713884ec825e401ff399096bf4a7bbda21ea517270c83d90714227abc</td></tr><tr><td>artifacts/evidence/symbol_exclusion_prediction_metrics.csv</td><td>25,310</td><td>3f2273c1b7a0e477190c9dfb84133517d9dd30509970e847c78cc4a43f40e1a8</td></tr><tr><td>artifacts/evidence/symbol_exclusion_summary.csv</td><td>49,224</td><td>e75cbca758a1fbcee1267a2c3b226b92d726c972f9e7bf3e624a51cfa8207b00</td></tr><tr><td>artifacts/evidence/tcn_fold_metrics.csv</td><td>949</td><td>28cced688c6e31b7b065d8a91b091018b6e4cb81a8e86be727b290df6cfd8a5c</td></tr><tr><td>artifacts/evidence/tcn_run_manifest.json</td><td>8,954</td><td>38def9eb034adfc8aa3bec3a0cabfcc6473751d2efeec9293eacc5fe83f1e5fe</td></tr><tr><td>artifacts/evidence/tcn_summary.csv</td><td>416</td><td>1d021fe29e5a875eab42faa66193462a213781014cc1d2038437109ee56121fd</td></tr><tr><td>artifacts/evidence/tcn_training_history.csv</td><td>945</td><td>b8ee40064417353ae79bdff4f7b9843d74167524e0ccab016d0bccae9c7f47e6</td></tr><tr><td>artifacts/evidence/transformer_fold_metrics.csv</td><td>1,001</td><td>649864260a3f723c586cc472b9142f71ce127b14cbd98543115f64dc3f10e9d8</td></tr><tr><td>artifacts/evidence/transformer_run_manifest.json</td><td>9,181</td><td>09fb166c28d7b4badedbc82404b9c6be938300272d840aeacf225623b051db07</td></tr><tr><td>artifacts/evidence/transformer_summary.csv</td><td>427</td><td>9454f81673d9e191acf0e9edbb8b91c7da1ae45d354acdf689bf25c2c9cf1c92</td></tr><tr><td>artifacts/evidence/transformer_training_history.csv</td><td>1,116</td><td>5eabb3c443a9f200169cded4b849bf6d96e30fab444db12bed19ee2a2164e4ce</td></tr><tr><td>configs/ablations.yaml</td><td>1,525</td><td>05738ed587654b681df9f3e64eb899e30b55a478dd1b396ad59d0d46f58f863d</td></tr><tr><td>configs/alignment_audit.yaml</td><td>375</td><td>fbc16b8ac60a217b28216cd9f5aa187d8e5130f238e92f578f78ba6aae218a22</td></tr><tr><td>configs/baselines.yaml</td><td>490</td><td>e2d1fd4cb79140a17d86061e2baa0f703e57b46f1c1e3b4f7fe0ebdbd285d5bc</td></tr><tr><td>configs/bootstrap.yaml</td><td>743</td><td>daa1d0b53b30c5920fccb3d1e9ea6602f26696d45409a098c105ac2b2168b8e6</td></tr><tr><td>configs/breadth_sensitivity.yaml</td><td>575</td><td>c97deeebbedc7feb7eda34cdc11ce360d36771fc502a53cb4385dadeab815662</td></tr><tr><td>configs/break_even.yaml</td><td>468</td><td>5a03d3bece86991f593d52f92ae0526bc6da6274f1bdc9c6d175c82d10ff76cd</td></tr><tr><td>configs/data.yaml</td><td>590</td><td>d50f95fb26ba7a1cb66cfb6f80b7463736ada8f000ef4d152c0907a9da544ab1</td></tr><tr><td>configs/evaluation.yaml</td><td>653</td><td>c689e74f6bdba0b35b45ee2084652bfc9afa9b53e4499b98308353164ae1a242</td></tr><tr><td>configs/horizon_sensitivity.yaml</td><td>616</td><td>be070311ca42d2393990567e68ca1e3b1047c43657ed3eef6d78a91e92ed68a0</td></tr><tr><td>configs/neural.yaml</td><td>1,475</td><td>511f8b0a74c1c0ade8dfbac2d80a99dcc07e0e24a6c8edc7f15a20cc8c0afa8f</td></tr><tr><td>configs/null_tests.yaml</td><td>327</td><td>9c480e1a37a060cf8986c0714cd8e796a7a71c671d46aaf2edd25f58a9bd7f0b</td></tr><tr><td>configs/rebalance_sensitivity.yaml</td><td>453</td><td>1e1316176a50d22d56d585ed90337e67358870e4e3ace38821207e2f2991798e</td></tr><tr><td>configs/regimes.yaml</td><td>672</td><td>3ca3027b96ea3df9fce17b40cbe4fcea8cac501b45268acdd6f8f9a841f086c1</td></tr><tr><td>configs/report.yaml</td><td>1,377</td><td>ffaf1f8309dab39477edd94664857b52e97fe04343c4cd404633370c60ee5fba</td></tr><tr><td>configs/research.yaml</td><td>674</td><td>8fcc869ee0e6921f75ec1cbfc03f2744f62cafffba268641678479dd3aad1888</td></tr><tr><td>configs/stability.yaml</td><td>531</td><td>c6a9923444a3116e62f7c98e8c722fa540d98ab587b517cde67f2601cfb46768</td></tr><tr><td>configs/symbol_dependence.yaml</td><td>608</td><td>eb5c4629e5fe17a225e89fd148e4e0d126cc11561a60ac883819fd2c6103d872</td></tr><tr><td>docs/ablation_protocol.md</td><td>3,273</td><td>a3d21d1f4750bcb716839fac64c79b62beaa5fd1be7cfcbf8ac0cae1b28d9e97</td></tr><tr><td>docs/alignment_audit_protocol.md</td><td>1,873</td><td>57a1b47b6cde7f9d1089e16ee7dc313dd6847298cc2ecd0d025e49d4155a6fa3</td></tr><tr><td>docs/baseline_protocol.md</td><td>1,225</td><td>b3fd70ff18aba84b99fe957b61bf289f534d60bf80e1506489e2a45801001367</td></tr><tr><td>docs/bootstrap_protocol.md</td><td>3,442</td><td>9b58fb088db90aa667e21116b3807ea0f25af9e33dd0eca5f5f1180364ee2344</td></tr><tr><td>docs/breadth_sensitivity_protocol.md</td><td>2,111</td><td>bfc56478a1ae65c844a4e039a6a26197cdfb02d6105587b467eb68863991f49d</td></tr><tr><td>docs/break_even_cost_protocol.md</td><td>2,248</td><td>a93c3c290f21eeb0dc37427c50d2be19e20477078931bf87374054aca9ac16cb</td></tr><tr><td>docs/data_contract.md</td><td>1,691</td><td>94a87c5ce1a8c679b5700829cea93e45c9a91b7558ffbac2f3c2f7a6789b528c</td></tr><tr><td>docs/horizon_sensitivity_protocol.md</td><td>2,730</td><td>145fd418a532bef94676eac1c62305b97ff2630fb2ff9c9c3e7a6f15b0f4e374</td></tr><tr><td>docs/mlp_protocol.md</td><td>1,545</td><td>5b72b8d44bce37192dd6f8e7cd392be624bb7c7fd9525391fe72e6bef431d839</td></tr><tr><td>docs/null_test_protocol.md</td><td>2,367</td><td>7afb09b3f9ec7588cbb899c905ad8452fe75bc7267bd17e6b27f447c0d428af7</td></tr><tr><td>docs/portfolio_protocol.md</td><td>2,532</td><td>6784fc3d50cd2d50faa0758db6de1ba433d3d2d5bdacfb2ad411e304efccf8ae</td></tr><tr><td>docs/rebalance_sensitivity_protocol.md</td><td>2,202</td><td>d285b287192394532f4d34e51da47c0b1a9755e502066ace3b2b745676802eb3</td></tr><tr><td>docs/regime_protocol.md</td><td>2,831</td><td>f06adb86d04cce3e6128b8dbf6b8a0a0a84505733740c16494833af6b69a5b5b</td></tr><tr><td>docs/report_protocol.md</td><td>2,260</td><td>e8322fd894c549c30a1c7b693ec773bb5e147518e1b6aadb45fa34f082533e4d</td></tr><tr><td>docs/research_contract.md</td><td>2,515</td><td>592bac690ce6c3c2e63e1cab8d9659bb9c2f70fec1d4dfe000be53164a228430</td></tr><tr><td>docs/sequence_protocol.md</td><td>1,748</td><td>ffde547cdfab4d485963f7fbc42e5206981618ab320c4cd0da8c3999ad336691</td></tr><tr><td>docs/stability_protocol.md</td><td>2,787</td><td>d4539a6cdba1a6e2320cc21e5aa1b9809d8000e155f09d6386c497098b9e2473</td></tr><tr><td>docs/symbol_dependence_protocol.md</td><td>2,525</td><td>dd58b1eb8e88f9ea4e54a50fad1c11e5eec362eb9d0a7ece34f92bbad835fc21</td></tr><tr><td>docs/tcn_protocol.md</td><td>2,074</td><td>5a23c9675be2587c97defc9e1ed99d525435ac7b166d2c369072ba9a5dd1836d</td></tr><tr><td>docs/transformer_protocol.md</td><td>2,033</td><td>98b6344a514ec6257b40f983e9c98777413c3196b5cdf71de681e2d390e30345</td></tr></tbody></table>
+</section>
+
+<footer>
+  Deterministic research artifact. No generation timestamp is embedded;
+  identical committed inputs produce identical report bytes.
+</footer>
+</main>
+</body>
+</html>

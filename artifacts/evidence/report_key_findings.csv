@@ -1,0 +1,8 @@
+category,finding,model,variant,value,unit,status,interpretation
+predictive,Highest frozen out-of-sample Rank IC,reversal_12,,0.0440668064672,Rank IC,primary,The non-learned reversal reference remains the strongest predictive benchmark.
+model_family,Highest learned-model out-of-sample Rank IC,transformer,neural_temporal_attention,0.0168335729212,Rank IC,primary,Temporal attention improves upon the pointwise MLP but does not surpass reversal.
+economics,Highest frozen pooled break-even cost,reversal_12,,0.602193757685,bps,primary,The strongest frozen result remains below the 1 bps focus cost.
+uncertainty,Models with primary Rank IC interval above zero,"lightgbm,mlp,reversal_12,ridge,transformer",60-minute circular blocks,5,models,primary,Predictive evidence is broader than economic evidence.
+uncertainty,Highest bootstrap frequency of break-even above focus cost,lightgbm,24-hour cohort blocks,0.028,frequency,primary,The empirical frequency remains too small to support the focus transaction-cost assumption.
+exploratory_ablation,Highest reduced-feature break-even cost,lightgbm,without_calendar,1.58337816877,bps,exploratory,This post-hoc feature variant requires independent validation and cannot replace the frozen primary result.
+exploratory_ablation,One-basis-point annualized return of best reduced variant,lightgbm,without_calendar,0.126663515516,log return/year,exploratory,Positive simulated return is not confirmatory because the variant was inspected on the same test sample.

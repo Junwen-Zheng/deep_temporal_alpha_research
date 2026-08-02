@@ -1,0 +1,33 @@
+report:
+  title: "Deep Temporal Alpha Research"
+  subtitle: "Deterministic out-of-sample evidence report through Milestone 21"
+  report_version: 1
+  milestones_covered: 21
+  focus_cost_bps: 1.0
+
+  output_html: "artifacts/reports/deep_temporal_alpha_research_report.html"
+  findings_output: "artifacts/evidence/report_key_findings.csv"
+  inventory_output: "artifacts/evidence/report_source_inventory.csv"
+  manifest_output: "artifacts/evidence/report_manifest.json"
+
+  source_tables:
+    oos: "artifacts/evidence/oos_model_metrics.csv"
+    break_even: "artifacts/evidence/break_even_model_summary.csv"
+    horizon: "artifacts/evidence/horizon_break_even.csv"
+    stability: "artifacts/evidence/stability_model_summary.csv"
+    symbol_dependence: "artifacts/evidence/symbol_dependence_model_summary.csv"
+    regimes: "artifacts/evidence/regime_model_summary.csv"
+    bootstrap_prediction: "artifacts/evidence/bootstrap_prediction_summary.csv"
+    bootstrap_portfolio: "artifacts/evidence/bootstrap_portfolio_summary.csv"
+    ablation_features: "artifacts/evidence/ablation_feature_summary.csv"
+    ablation_families: "artifacts/evidence/ablation_model_family_summary.csv"
+
+  source_globs:
+    - "README.md"
+    - "configs/*.yaml"
+    - "docs/*.md"
+    - "artifacts/evidence/*.csv"
+    - "artifacts/evidence/*.json"
+
+  excluded_source_prefixes:
+    - "artifacts/evidence/report_"

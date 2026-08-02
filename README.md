@@ -165,3 +165,11 @@ leave-one-feature-family-out retraining for Ridge and LightGBM. Returns,
 range/volatility, activity/flow, and calendar inputs are removed separately
 while retaining the original walk-forward splits, validation-only model
 selection, portfolio construction, and transaction-cost assumptions.
+
+## Deterministic research report
+
+The complete committed evidence is assembled into a self-contained HTML
+report with inline CSS and SVG, explicit separation of primary and exploratory
+results, SHA-256 source inventory, and no external network resources. Repeated
+generation from identical inputs must produce byte-identical report and
+manifest hashes.
