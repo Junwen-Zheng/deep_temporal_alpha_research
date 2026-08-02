@@ -1,0 +1,22 @@
+{
+  "expected_symbol_count": 20,
+  "fold_count": 3,
+  "models": [
+    "momentum_12",
+    "reversal_12",
+    "ridge",
+    "lightgbm",
+    "mlp",
+    "tcn",
+    "transformer"
+  ],
+  "momentum_observed_mean_rank_ic": -0.0440668064671959,
+  "momentum_reversal_max_abs_sum": 0.0,
+  "prediction_rows_per_model": 1041840,
+  "prediction_timestamps_per_model": 52092,
+  "reversal_observed_mean_rank_ic": 0.0440668064671959,
+  "schema_version": 1,
+  "symbols_identical_across_models": true,
+  "targets_identical_across_models": true,
+  "timestamps_identical_across_models": true
+}

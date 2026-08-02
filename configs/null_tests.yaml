@@ -1,0 +1,19 @@
+null_tests:
+  seed: 20260802
+  permutations: 50
+  expected_symbol_count: 20
+
+  time_shifts_bars:
+    - -24
+    - -12
+    - -6
+    - -1
+    - 0
+    - 1
+    - 6
+    - 12
+    - 24
+
+  evaluation_config: "configs/evaluation.yaml"
+  source_oos_metrics: "artifacts/evidence/oos_model_metrics.csv"
+  evidence_dir: "artifacts/evidence"

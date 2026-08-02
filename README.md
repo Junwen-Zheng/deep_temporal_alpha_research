@@ -78,3 +78,10 @@ All models are compared using next-bar execution and 12 staggered,
 non-overlapping hourly cohorts. Each portfolio is dollar-neutral and
 unit-gross, holding the top four and bottom four contracts. Results include
 turnover and transaction-cost sensitivity from zero to ten basis points.
+
+## Null and alignment tests
+
+Every frozen out-of-sample prediction series is evaluated against deterministic
+within-timestamp target permutations and multiple temporal target shifts. The
+audit also verifies exact zero-shift metric reproduction and the numerical
+identity between the momentum and reversal reference scores.
