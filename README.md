@@ -85,3 +85,10 @@ Every frozen out-of-sample prediction series is evaluated against deterministic
 within-timestamp target permutations and multiple temporal target shifts. The
 audit also verifies exact zero-shift metric reproduction and the numerical
 identity between the momentum and reversal reference scores.
+
+## Label and execution audit
+
+All forward labels are reconstructed directly from normalized bars, including
+their exact 12-bar end timestamps and cross-sectional demeaning. The audit also
+reconstructs next-bar-open execution returns, verifies split containment, and
+checks every frozen prediction file against the canonical research panel.

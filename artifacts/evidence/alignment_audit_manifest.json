@@ -1,0 +1,160 @@
+{
+  "alignment_config": "configs/alignment_audit.yaml",
+  "alignment_config_sha256": "fbc16b8ac60a217b28216cd9f5aa187d8e5130f238e92f578f78ba6aae218a22",
+  "data_config": "configs/data.yaml",
+  "data_config_sha256": "d50f95fb26ba7a1cb66cfb6f80b7463736ada8f000ef4d152c0907a9da544ab1",
+  "evaluation_config": "configs/evaluation.yaml",
+  "evaluation_config_sha256": "c689e74f6bdba0b35b45ee2084652bfc9afa9b53e4499b98308353164ae1a242",
+  "evidence_files": {
+    "artifacts/evidence/alignment_prediction_metrics.csv": "87e8086e4b55a00d50fa89800163c190900c1b126487e9662756c28b76f09cff",
+    "artifacts/evidence/alignment_split_metrics.csv": "f2957123ccc2085cb17cf40d726af16bd467814cb77b6fe9560b74d1c2cdae0f",
+    "artifacts/evidence/alignment_summary.json": "f582cc5e64dc0850004fdb9c0ac99c36749d0b4a16a7f75dac223be49e4ba94b",
+    "artifacts/evidence/alignment_symbol_metrics.csv": "4ff0e63921db81d86fb2e8deddfc28aa4ffb8ceae8dcba0a05a5a43983528552"
+  },
+  "models": [
+    "momentum_12",
+    "reversal_12",
+    "ridge",
+    "lightgbm",
+    "mlp",
+    "tcn",
+    "transformer"
+  ],
+  "portfolio_manifest": "artifacts/evidence/portfolio_run_manifest.json",
+  "portfolio_manifest_sha256": "ba93c5bc82c508e036364e856d6b2a4d74016a89f369bceecbc71228a8586d98",
+  "prediction_files": [
+    {
+      "fold": 1,
+      "model": "lightgbm",
+      "prediction_file": "artifacts/predictions/baselines/lightgbm_fold_1_test.parquet",
+      "prediction_file_sha256": "ff88d7b75eddb36e804c552a0cc83476e77c5b1d1985e41dd139a84b9dd8ae10"
+    },
+    {
+      "fold": 2,
+      "model": "lightgbm",
+      "prediction_file": "artifacts/predictions/baselines/lightgbm_fold_2_test.parquet",
+      "prediction_file_sha256": "1632f9d204981ecdc198050f73555e6d468981cd778c113b95d626ac22f5edbc"
+    },
+    {
+      "fold": 3,
+      "model": "lightgbm",
+      "prediction_file": "artifacts/predictions/baselines/lightgbm_fold_3_test.parquet",
+      "prediction_file_sha256": "d1d4605c6f505b1fb2ebdbe8d4659faf5c1f4df545f24e5211701c2e3e29e48f"
+    },
+    {
+      "fold": 1,
+      "model": "mlp",
+      "prediction_file": "artifacts/predictions/neural/mlp_fold_1_test.parquet",
+      "prediction_file_sha256": "2466d02344224dd91eecc4c0154b367df8c1c7e4b335b1139675f3aadc1e3021"
+    },
+    {
+      "fold": 2,
+      "model": "mlp",
+      "prediction_file": "artifacts/predictions/neural/mlp_fold_2_test.parquet",
+      "prediction_file_sha256": "24bb363531f522061146a4b16410082d4c9a795afe2100abbbb2a05695a8a147"
+    },
+    {
+      "fold": 3,
+      "model": "mlp",
+      "prediction_file": "artifacts/predictions/neural/mlp_fold_3_test.parquet",
+      "prediction_file_sha256": "771894db5afb7159dc93a86b4ff01fc3aea56982d2242eff09390b6d8b799b14"
+    },
+    {
+      "fold": 1,
+      "model": "momentum_12",
+      "prediction_file": "artifacts/predictions/baselines/momentum_12_fold_1_test.parquet",
+      "prediction_file_sha256": "d093e79315a95c81454ad4fa7c5b2cf3a7fc41c62f4cb38a5a299b06a8987709"
+    },
+    {
+      "fold": 2,
+      "model": "momentum_12",
+      "prediction_file": "artifacts/predictions/baselines/momentum_12_fold_2_test.parquet",
+      "prediction_file_sha256": "bd45cd7bfa66069bdeebf9e7cb007a00778e71ff949f6f970dcd6f7e19a9c18a"
+    },
+    {
+      "fold": 3,
+      "model": "momentum_12",
+      "prediction_file": "artifacts/predictions/baselines/momentum_12_fold_3_test.parquet",
+      "prediction_file_sha256": "2fd79ada79d9d1d73f4663d9f0cdda1d4ea0a86b810fa34af68c658d054dd771"
+    },
+    {
+      "fold": 1,
+      "model": "reversal_12",
+      "prediction_file": "artifacts/predictions/baselines/reversal_12_fold_1_test.parquet",
+      "prediction_file_sha256": "bac2e38e95c3be00d845e96be8e6747d774a7be3adb3c5f902e92d4cc4bd2491"
+    },
+    {
+      "fold": 2,
+      "model": "reversal_12",
+      "prediction_file": "artifacts/predictions/baselines/reversal_12_fold_2_test.parquet",
+      "prediction_file_sha256": "0562cc4e30eb3329c618eaeec831a3a45b631623c7274fb22cb61c05ddf25ee5"
+    },
+    {
+      "fold": 3,
+      "model": "reversal_12",
+      "prediction_file": "artifacts/predictions/baselines/reversal_12_fold_3_test.parquet",
+      "prediction_file_sha256": "6db826b56e2284d8370a3d83cc23ae79b63bd87d921f4e78bf77827601254bb1"
+    },
+    {
+      "fold": 1,
+      "model": "ridge",
+      "prediction_file": "artifacts/predictions/baselines/ridge_fold_1_test.parquet",
+      "prediction_file_sha256": "fdc59586a7a7c7359cdae2b1c40d589e7dc116becd026ac9d928ce4fd6968e71"
+    },
+    {
+      "fold": 2,
+      "model": "ridge",
+      "prediction_file": "artifacts/predictions/baselines/ridge_fold_2_test.parquet",
+      "prediction_file_sha256": "4fd1de8bd2136929983fd97909353ae7324e18f6218c1e298191fe869c2ac38f"
+    },
+    {
+      "fold": 3,
+      "model": "ridge",
+      "prediction_file": "artifacts/predictions/baselines/ridge_fold_3_test.parquet",
+      "prediction_file_sha256": "108f60ee9d0553ca8bfcc9dcbbbb6d28cff7f9f8084ec4285b6b39c3487af20d"
+    },
+    {
+      "fold": 1,
+      "model": "tcn",
+      "prediction_file": "artifacts/predictions/neural/tcn_fold_1_test.parquet",
+      "prediction_file_sha256": "117d2eedde354bba5f8bb836698b527a6d9ed528ebb19102874a461d346cf974"
+    },
+    {
+      "fold": 2,
+      "model": "tcn",
+      "prediction_file": "artifacts/predictions/neural/tcn_fold_2_test.parquet",
+      "prediction_file_sha256": "df36685f8f7833ff0395e0871c8aa41ebd8e832f9a0c86a97c68277b71a82f2e"
+    },
+    {
+      "fold": 3,
+      "model": "tcn",
+      "prediction_file": "artifacts/predictions/neural/tcn_fold_3_test.parquet",
+      "prediction_file_sha256": "fd970c540fa5e23a6ee0a94bc4168435f8852bb048a39f73b2faa591040c3b69"
+    },
+    {
+      "fold": 1,
+      "model": "transformer",
+      "prediction_file": "artifacts/predictions/neural/transformer_fold_1_test.parquet",
+      "prediction_file_sha256": "aecea80588d97cd1fb8f3fc787147f3427e5d9f75ae8e20808dd0cb9c1dcc986"
+    },
+    {
+      "fold": 2,
+      "model": "transformer",
+      "prediction_file": "artifacts/predictions/neural/transformer_fold_2_test.parquet",
+      "prediction_file_sha256": "a9e15058c5939864845e423f80571ea4b474031a8c591a515a94c6ce8322dcc3"
+    },
+    {
+      "fold": 3,
+      "model": "transformer",
+      "prediction_file": "artifacts/predictions/neural/transformer_fold_3_test.parquet",
+      "prediction_file_sha256": "d6c2066c217394e80d36e9155567fcb15cb547788fa02d5165dd689d83e9e704"
+    }
+  ],
+  "research_config": "configs/research.yaml",
+  "research_config_sha256": "8fcc869ee0e6921f75ec1cbfc03f2744f62cafffba268641678479dd3aad1888",
+  "research_manifest": "data/manifests/research_dataset_manifest.json",
+  "research_manifest_sha256": "d28aef2d0b7004dff4064023268d62cc72ce09b0cc04598b9f5c5e7afae0246f",
+  "research_panel": "data/processed/research/research_panel.parquet",
+  "research_panel_sha256": "aa3a0df29e2e414626cd5044c7d18ce98e26d48c5be808fdbbdfcff695434cbc",
+  "schema_version": 1
+}

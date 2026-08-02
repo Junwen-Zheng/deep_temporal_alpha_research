@@ -1,0 +1,14 @@
+alignment_audit:
+  data_config: "configs/data.yaml"
+  research_config: "configs/research.yaml"
+  evaluation_config: "configs/evaluation.yaml"
+
+  portfolio_manifest: "artifacts/evidence/portfolio_run_manifest.json"
+
+  horizon_bars: 12
+  entry_offset_bars: 1
+  exit_offset_bars: 12
+  interval_minutes: 5
+  absolute_tolerance: 0.0000000001
+
+  evidence_dir: "artifacts/evidence"

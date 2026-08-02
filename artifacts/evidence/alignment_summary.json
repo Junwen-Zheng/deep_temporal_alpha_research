@@ -1,0 +1,22 @@
+{
+  "all_label_horizons_exact": true,
+  "all_prediction_keys_aligned": true,
+  "all_prediction_targets_aligned": true,
+  "all_split_labels_contained": true,
+  "entry_offset_bars": 1,
+  "execution_convention": "next_bar_open_to_horizon_close",
+  "exit_offset_bars": 12,
+  "horizon_bars": 12,
+  "horizon_minutes": 60,
+  "interval_minutes": 5,
+  "maximum_cross_sectional_target_mean": 1.9428902930940238e-17,
+  "maximum_demeaned_target_abs_error": 0.0,
+  "maximum_label_end_error_ns": 0,
+  "maximum_raw_target_abs_error": 0.0,
+  "panel_rows": 2101200,
+  "panel_timestamps": 105060,
+  "portfolio_manifest_execution_verified": true,
+  "rows_per_symbol": 105060,
+  "schema_version": 1,
+  "symbol_count": 20
+}
