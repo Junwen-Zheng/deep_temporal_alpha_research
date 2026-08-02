@@ -10,6 +10,7 @@ neural:
     database_path: "mlflow.db"
     artifact_dir: "mlartifacts"
     experiment_name: "deep_temporal_alpha_mlp"
+    tcn_experiment_name: "deep_temporal_alpha_tcn"
 
   mlp:
     hidden_dims:
@@ -23,3 +24,29 @@ neural:
     learning_rate: 0.001
     weight_decay: 0.0001
     gradient_clip_norm: 1.0
+
+  tcn:
+    channel_count: 32
+    kernel_size: 2
+    dilations:
+      - 1
+      - 2
+      - 4
+      - 8
+      - 16
+      - 32
+      - 64
+    dropout: 0.10
+
+    train_endpoint_stride: 6
+    endpoint_batch_size: 32
+    prediction_endpoint_batch_size: 64
+
+    max_epochs: 8
+    patience: 2
+    minimum_improvement: 0.000001
+
+    learning_rate: 0.0003
+    weight_decay: 0.0001
+    gradient_clip_norm: 1.0
+    mixed_precision: true

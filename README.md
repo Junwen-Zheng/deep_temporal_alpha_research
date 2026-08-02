@@ -57,3 +57,10 @@ panel is stored once as a timestamp-by-symbol-by-feature tensor, and overlapping
 windows are sliced on demand. A dedicated audit verifies temporal continuity,
 split alignment, complete cross-sections, and exact history exclusions before
 any sequence model is trained.
+
+## Temporal convolution baseline
+
+The causal TCN consumes the full 128-bar sequence through a dilation schedule
+whose receptive field is exactly 128 bars. Training deterministically
+subsamples highly overlapping endpoints, while validation and test predictions
+continue to cover every eligible five-minute timestamp.
