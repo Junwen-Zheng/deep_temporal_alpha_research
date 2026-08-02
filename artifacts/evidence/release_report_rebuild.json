@@ -1,0 +1,12 @@
+{
+  "artifacts": {
+    "artifacts/evidence/report_key_findings.csv": "9746030c0ccc42107e1bd8ba7841da692f8a8bd454312fc71762b34b484d3594",
+    "artifacts/evidence/report_manifest.json": "d5e87f29cd81ea2026722935a770a006f689d42593b3a92ac3464f7bddace949",
+    "artifacts/evidence/report_source_inventory.csv": "95ef64b2feac6fbcecf7e7e01447cc3ff72259263f5c18f5070dfd2f36e35d40",
+    "artifacts/reports/deep_temporal_alpha_research_report.html": "585df7f57e3789eb62fb5a9f5e52bbf4345c7518fc58ba454ec966d48fa097d6"
+  },
+  "build_count": 2,
+  "report_bytes": 37911,
+  "schema_version": 1,
+  "stable": true
+}

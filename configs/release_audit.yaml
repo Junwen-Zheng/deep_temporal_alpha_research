@@ -1,0 +1,55 @@
+release_audit:
+  required_test_count: 137
+  maximum_file_bytes: 95000000
+
+  report_html: "artifacts/reports/deep_temporal_alpha_research_report.html"
+  report_manifest: "artifacts/evidence/report_manifest.json"
+  report_rebuild_record: "artifacts/evidence/release_report_rebuild.json"
+
+  manifest_glob: "artifacts/evidence/*manifest*.json"
+
+  excluded_manifests:
+    - "artifacts/evidence/release_manifest.json"
+
+  audit_output: "artifacts/evidence/reproducibility_audit.csv"
+  inventory_output: "artifacts/evidence/release_inventory.csv"
+  environment_output: "artifacts/evidence/release_environment.json"
+  manifest_output: "artifacts/evidence/release_manifest.json"
+
+  inventory_exclusions:
+    - "artifacts/evidence/reproducibility_audit.csv"
+    - "artifacts/evidence/release_inventory.csv"
+    - "artifacts/evidence/release_manifest.json"
+
+  allowed_worktree_paths:
+    - "configs/release_audit.yaml"
+    - "docs/reproducibility_release_audit.md"
+    - "scripts/audit_reproducibility_release.py"
+    - "src/deep_alpha/evaluation/release_audit.py"
+    - "tests/test_release_audit.py"
+    - "artifacts/evidence/release_report_rebuild.json"
+    - "artifacts/evidence/reproducibility_audit.csv"
+    - "artifacts/evidence/release_inventory.csv"
+    - "artifacts/evidence/release_environment.json"
+    - "artifacts/evidence/release_manifest.json"
+
+  required_packages:
+    - "numpy"
+    - "pandas"
+    - "pyarrow"
+    - "scikit-learn"
+    - "lightgbm"
+    - "torch"
+    - "pytest"
+    - "ruff"
+
+  text_extensions:
+    - ".py"
+    - ".md"
+    - ".yaml"
+    - ".yml"
+    - ".toml"
+    - ".json"
+    - ".csv"
+    - ".html"
+    - ".txt"

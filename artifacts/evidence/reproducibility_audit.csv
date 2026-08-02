@@ -1,0 +1,17 @@
+check,status,detail
+pytest,pass,137 passed
+ruff,pass,Ruff checks passed
+pip_check,pass,Dependency consistency passed
+compileall,pass,Python compilation passed
+git_diff_check,pass,Git whitespace check passed
+worktree_scope,pass,Only configured release-audit paths are modified or untracked
+report_rebuild,pass,Frozen report was rebuilt twice with identical hashes
+report_manifest,pass,Report hash matches report manifest and rebuild record
+manifest_hash_references,pass,520 historical manifest references verified
+release_inventory,pass,218 release files inventoried
+file_size_limit,pass,No release file exceeds 95000000 bytes
+symlinks,pass,No release symlinks found
+utf8_text,pass,Release text files decode as UTF-8
+line_endings,pass,Release text files use LF endings
+absolute_user_paths,pass,No machine-specific user paths found in release text
+environment_packages,pass,8 required package versions recorded
