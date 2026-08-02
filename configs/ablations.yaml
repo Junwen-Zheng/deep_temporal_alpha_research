@@ -1,0 +1,58 @@
+ablations:
+  data_config: "configs/data.yaml"
+  research_config: "configs/research.yaml"
+  baseline_config: "configs/baselines.yaml"
+  evaluation_config: "configs/evaluation.yaml"
+
+  source_oos_metrics: "artifacts/evidence/oos_model_metrics.csv"
+  source_portfolio_cohort_metrics: "artifacts/evidence/portfolio_cohort_metrics.csv"
+  source_portfolio_manifest: "artifacts/evidence/portfolio_run_manifest.json"
+  source_break_even_summary: "artifacts/evidence/break_even_model_summary.csv"
+  source_baseline_manifest: "artifacts/evidence/baseline_run_manifest.json"
+  source_baseline_selection: "artifacts/evidence/baseline_model_selection.csv"
+  source_bootstrap_prediction: "artifacts/evidence/bootstrap_prediction_summary.csv"
+  source_bootstrap_portfolio: "artifacts/evidence/bootstrap_portfolio_summary.csv"
+
+  models:
+    - ridge
+    - lightgbm
+
+  feature_families:
+    returns:
+      - return_1
+      - return_3
+      - return_12
+      - return_48
+
+    range_volatility:
+      - log_range
+      - close_open_return
+      - realized_vol_12
+      - realized_vol_48
+
+    activity_flow:
+      - log_quote_volume
+      - volume_zscore_48
+      - trade_count_zscore_48
+      - taker_buy_ratio
+
+    calendar:
+      - time_of_day_sin
+      - time_of_day_cos
+      - weekday_sin
+      - weekday_cos
+
+  cost_bps:
+    - 0.0
+    - 1.0
+    - 2.0
+    - 5.0
+    - 10.0
+
+  focus_cost_bps: 1.0
+
+  expected_symbol_count: 20
+  expected_prediction_rows: 1041840
+  expected_prediction_timestamps: 52092
+
+  evidence_dir: "artifacts/evidence"

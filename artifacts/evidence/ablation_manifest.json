@@ -1,0 +1,191 @@
+{
+  "ablated_variants_retrained": true,
+  "ablation_config": "configs/ablations.yaml",
+  "ablation_config_sha256": "05738ed587654b681df9f3e64eb899e30b55a478dd1b396ad59d0d46f58f863d",
+  "ablation_predictions_committed": false,
+  "baseline_config": "configs/baselines.yaml",
+  "baseline_config_sha256": "e2d1fd4cb79140a17d86061e2baa0f703e57b46f1c1e3b4f7fe0ebdbd285d5bc",
+  "cost_bps": [
+    0.0,
+    1.0,
+    2.0,
+    5.0,
+    10.0
+  ],
+  "data_config": "configs/data.yaml",
+  "data_config_sha256": "d50f95fb26ba7a1cb66cfb6f80b7463736ada8f000ef4d152c0907a9da544ab1",
+  "evaluation_config": "configs/evaluation.yaml",
+  "evaluation_config_sha256": "c689e74f6bdba0b35b45ee2084652bfc9afa9b53e4499b98308353164ae1a242",
+  "evidence_files": {
+    "artifacts/evidence/ablation_feature_fold_metrics.csv": "66132e8048aa903e0d39d656822816d957c5e858d8571c097543d08d558a3830",
+    "artifacts/evidence/ablation_feature_summary.csv": "2a3c9220f55118e30be0ac34cee7316367e3ce729dcfb3db9afc3034def49c49",
+    "artifacts/evidence/ablation_model_family_summary.csv": "2f9244e1674ecc64e80d01035ba1f6e72ac5d451288b869bdf92ee7ef34ff1a8",
+    "artifacts/evidence/ablation_model_selection.csv": "e2f2a20590a88619b1726111cfcde6038fb5e1a79868c046eaab09736925c27a",
+    "artifacts/evidence/ablation_portfolio_cohort_metrics.csv": "4849cbb07a73369dc18f9ed9ac0f911eede79127b518ec4a1b002de5d460d5fc"
+  },
+  "feature_ablation_scope": "deterministic Ridge and LightGBM leave-one-family-out retraining",
+  "feature_columns": [
+    "return_1",
+    "return_3",
+    "return_12",
+    "return_48",
+    "log_range",
+    "close_open_return",
+    "realized_vol_12",
+    "realized_vol_48",
+    "log_quote_volume",
+    "volume_zscore_48",
+    "trade_count_zscore_48",
+    "taker_buy_ratio",
+    "time_of_day_sin",
+    "time_of_day_cos",
+    "weekday_sin",
+    "weekday_cos"
+  ],
+  "feature_families": {
+    "activity_flow": [
+      "log_quote_volume",
+      "volume_zscore_48",
+      "trade_count_zscore_48",
+      "taker_buy_ratio"
+    ],
+    "calendar": [
+      "time_of_day_sin",
+      "time_of_day_cos",
+      "weekday_sin",
+      "weekday_cos"
+    ],
+    "range_volatility": [
+      "log_range",
+      "close_open_return",
+      "realized_vol_12",
+      "realized_vol_48"
+    ],
+    "returns": [
+      "return_1",
+      "return_3",
+      "return_12",
+      "return_48"
+    ]
+  },
+  "feature_sets": {
+    "full": [
+      "return_1",
+      "return_3",
+      "return_12",
+      "return_48",
+      "log_range",
+      "close_open_return",
+      "realized_vol_12",
+      "realized_vol_48",
+      "log_quote_volume",
+      "volume_zscore_48",
+      "trade_count_zscore_48",
+      "taker_buy_ratio",
+      "time_of_day_sin",
+      "time_of_day_cos",
+      "weekday_sin",
+      "weekday_cos"
+    ],
+    "without_activity_flow": [
+      "return_1",
+      "return_3",
+      "return_12",
+      "return_48",
+      "log_range",
+      "close_open_return",
+      "realized_vol_12",
+      "realized_vol_48",
+      "time_of_day_sin",
+      "time_of_day_cos",
+      "weekday_sin",
+      "weekday_cos"
+    ],
+    "without_calendar": [
+      "return_1",
+      "return_3",
+      "return_12",
+      "return_48",
+      "log_range",
+      "close_open_return",
+      "realized_vol_12",
+      "realized_vol_48",
+      "log_quote_volume",
+      "volume_zscore_48",
+      "trade_count_zscore_48",
+      "taker_buy_ratio"
+    ],
+    "without_range_volatility": [
+      "return_1",
+      "return_3",
+      "return_12",
+      "return_48",
+      "log_quote_volume",
+      "volume_zscore_48",
+      "trade_count_zscore_48",
+      "taker_buy_ratio",
+      "time_of_day_sin",
+      "time_of_day_cos",
+      "weekday_sin",
+      "weekday_cos"
+    ],
+    "without_returns": [
+      "log_range",
+      "close_open_return",
+      "realized_vol_12",
+      "realized_vol_48",
+      "log_quote_volume",
+      "volume_zscore_48",
+      "trade_count_zscore_48",
+      "taker_buy_ratio",
+      "time_of_day_sin",
+      "time_of_day_cos",
+      "weekday_sin",
+      "weekday_cos"
+    ]
+  },
+  "focus_cost_bps": 1.0,
+  "folds": [
+    1,
+    2,
+    3
+  ],
+  "full_portfolio_metrics_reproduced": true,
+  "full_prediction_metrics_reproduced": true,
+  "full_variants_use_frozen_predictions": true,
+  "holding_bars": 12,
+  "holding_minutes": 60,
+  "model_ablation_scope": "frozen seven-model family comparison with bootstrap uncertainty",
+  "model_family_summary_models": [
+    "reversal_12",
+    "transformer",
+    "lightgbm",
+    "mlp",
+    "ridge",
+    "tcn",
+    "momentum_12"
+  ],
+  "models": [
+    "ridge",
+    "lightgbm"
+  ],
+  "prediction_rows_per_model_variant": 1041840,
+  "prediction_timestamps_per_model_variant": 52092,
+  "research_config": "configs/research.yaml",
+  "research_config_sha256": "8fcc869ee0e6921f75ec1cbfc03f2744f62cafffba268641678479dd3aad1888",
+  "schema_version": 1,
+  "source_files": {
+    "artifacts/evidence/baseline_model_selection.csv": "37ece634a26b30aad19b3255e9048012f1aab095e9b0e61da9d6881ad71a0620",
+    "artifacts/evidence/baseline_run_manifest.json": "1521c45a451a3eb6c789e59ba54c8f0d981a2a803fddc8bc51a6c0f901fff96d",
+    "artifacts/evidence/bootstrap_portfolio_summary.csv": "3d89a82f70b6aef2a26c4175fb400fc773314c240a66f941085769c446b3f83a",
+    "artifacts/evidence/bootstrap_prediction_summary.csv": "9e359af1b71023ffa696dd8cdf6118dbfebfad00cbfe08aac6cf448de2a94298",
+    "artifacts/evidence/break_even_model_summary.csv": "037d377a51ecd4ea4996f609e3664d0261eab317d4bd6ee59818eca22cc004cb",
+    "artifacts/evidence/oos_model_metrics.csv": "20b3b13b1d48514aa549e43c8ed5786c7cb57f03b6389b7baed98c09b9058525",
+    "artifacts/evidence/portfolio_cohort_metrics.csv": "e3bb42397960d07365dd5e7fb477d06a31b89d2a6344980d3605b9df97b379f7",
+    "artifacts/evidence/portfolio_run_manifest.json": "ba93c5bc82c508e036364e856d6b2a4d74016a89f369bceecbc71228a8586d98",
+    "data/manifests/research_dataset_manifest.json": "d28aef2d0b7004dff4064023268d62cc72ce09b0cc04598b9f5c5e7afae0246f",
+    "data/processed/research/research_panel.parquet": "aa3a0df29e2e414626cd5044c7d18ce98e26d48c5be808fdbbdfcff695434cbc"
+  },
+  "top_count": 4,
+  "variant_count": 5
+}

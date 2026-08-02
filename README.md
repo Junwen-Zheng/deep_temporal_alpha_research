@@ -157,3 +157,11 @@ minutes. Portfolio gross return and turnover are resampled jointly within each
 non-overlapping hourly cohort using blocks from one day to one week. The
 resulting deterministic percentile intervals cover Rank IC, gross return,
 one-basis-point net return, turnover, and break-even transaction cost.
+
+## Model and feature ablations
+
+The frozen seven-model comparison is supplemented by deterministic
+leave-one-feature-family-out retraining for Ridge and LightGBM. Returns,
+range/volatility, activity/flow, and calendar inputs are removed separately
+while retaining the original walk-forward splits, validation-only model
+selection, portfolio construction, and transaction-cost assumptions.
