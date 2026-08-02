@@ -1,0 +1,165 @@
+{
+  "feature_columns": [
+    "return_1",
+    "return_3",
+    "return_12",
+    "return_48",
+    "log_range",
+    "close_open_return",
+    "realized_vol_12",
+    "realized_vol_48",
+    "log_quote_volume",
+    "volume_zscore_48",
+    "trade_count_zscore_48",
+    "taker_buy_ratio",
+    "time_of_day_sin",
+    "time_of_day_cos",
+    "weekday_sin",
+    "weekday_cos"
+  ],
+  "feature_count": 16,
+  "first_panel_timestamp": "2025-07-01T04:00:00+00:00",
+  "first_usable_endpoint_timestamp": "2025-07-01T14:35:00+00:00",
+  "folds": [
+    {
+      "fold": 1,
+      "splits": [
+        {
+          "excluded_history_rows": 2540,
+          "excluded_history_timestamps": 127,
+          "first_endpoint_timestamp": "2025-07-01T14:35:00+00:00",
+          "last_endpoint_timestamp": "2025-11-30T22:55:00+00:00",
+          "row_count": 877540,
+          "split": "train",
+          "timestamp_count": 43877
+        },
+        {
+          "excluded_history_rows": 0,
+          "excluded_history_timestamps": 0,
+          "first_endpoint_timestamp": "2025-12-01T00:00:00+00:00",
+          "last_endpoint_timestamp": "2025-12-31T22:55:00+00:00",
+          "row_count": 178320,
+          "split": "validation",
+          "timestamp_count": 8916
+        },
+        {
+          "excluded_history_rows": 0,
+          "excluded_history_timestamps": 0,
+          "first_endpoint_timestamp": "2026-01-01T00:00:00+00:00",
+          "last_endpoint_timestamp": "2026-02-28T22:55:00+00:00",
+          "row_count": 339600,
+          "split": "test",
+          "timestamp_count": 16980
+        }
+      ],
+      "test_end": "2026-02-28T23:55:00+00:00",
+      "train_end": "2025-11-30T23:55:00+00:00",
+      "validation_end": "2025-12-31T23:55:00+00:00"
+    },
+    {
+      "fold": 2,
+      "splits": [
+        {
+          "excluded_history_rows": 2540,
+          "excluded_history_timestamps": 127,
+          "first_endpoint_timestamp": "2025-07-01T14:35:00+00:00",
+          "last_endpoint_timestamp": "2026-01-31T22:55:00+00:00",
+          "row_count": 1234660,
+          "split": "train",
+          "timestamp_count": 61733
+        },
+        {
+          "excluded_history_rows": 0,
+          "excluded_history_timestamps": 0,
+          "first_endpoint_timestamp": "2026-02-01T00:00:00+00:00",
+          "last_endpoint_timestamp": "2026-02-28T22:55:00+00:00",
+          "row_count": 161040,
+          "split": "validation",
+          "timestamp_count": 8052
+        },
+        {
+          "excluded_history_rows": 0,
+          "excluded_history_timestamps": 0,
+          "first_endpoint_timestamp": "2026-03-01T00:00:00+00:00",
+          "last_endpoint_timestamp": "2026-04-30T22:55:00+00:00",
+          "row_count": 351120,
+          "split": "test",
+          "timestamp_count": 17556
+        }
+      ],
+      "test_end": "2026-04-30T23:55:00+00:00",
+      "train_end": "2026-01-31T23:55:00+00:00",
+      "validation_end": "2026-02-28T23:55:00+00:00"
+    },
+    {
+      "fold": 3,
+      "splits": [
+        {
+          "excluded_history_rows": 2540,
+          "excluded_history_timestamps": 127,
+          "first_endpoint_timestamp": "2025-07-01T14:35:00+00:00",
+          "last_endpoint_timestamp": "2026-03-31T22:55:00+00:00",
+          "row_count": 1574500,
+          "split": "train",
+          "timestamp_count": 78725
+        },
+        {
+          "excluded_history_rows": 0,
+          "excluded_history_timestamps": 0,
+          "first_endpoint_timestamp": "2026-04-01T00:00:00+00:00",
+          "last_endpoint_timestamp": "2026-04-30T22:55:00+00:00",
+          "row_count": 172560,
+          "split": "validation",
+          "timestamp_count": 8628
+        },
+        {
+          "excluded_history_rows": 0,
+          "excluded_history_timestamps": 0,
+          "first_endpoint_timestamp": "2026-05-01T00:00:00+00:00",
+          "last_endpoint_timestamp": "2026-06-30T22:55:00+00:00",
+          "row_count": 351120,
+          "split": "test",
+          "timestamp_count": 17556
+        }
+      ],
+      "test_end": "2026-06-30T23:55:00+00:00",
+      "train_end": "2026-03-31T23:55:00+00:00",
+      "validation_end": "2026-04-30T23:55:00+00:00"
+    }
+  ],
+  "history_span_minutes": 635,
+  "interval_minutes": 5,
+  "last_panel_timestamp": "2026-06-30T22:55:00+00:00",
+  "research_config": "configs/research.yaml",
+  "research_config_sha256": "8fcc869ee0e6921f75ec1cbfc03f2744f62cafffba268641678479dd3aad1888",
+  "research_panel": "data/processed/research/research_panel.parquet",
+  "research_panel_sha256": "aa3a0df29e2e414626cd5044c7d18ce98e26d48c5be808fdbbdfcff695434cbc",
+  "schema_version": 1,
+  "sequence_length": 128,
+  "source_research_manifest": "data/manifests/research_dataset_manifest.json",
+  "source_research_manifest_sha256": "d28aef2d0b7004dff4064023268d62cc72ce09b0cc04598b9f5c5e7afae0246f",
+  "symbol_count": 20,
+  "symbols": [
+    "ADAUSDT",
+    "APTUSDT",
+    "ARBUSDT",
+    "ATOMUSDT",
+    "AVAXUSDT",
+    "BCHUSDT",
+    "BNBUSDT",
+    "BTCUSDT",
+    "DOGEUSDT",
+    "DOTUSDT",
+    "ETCUSDT",
+    "ETHUSDT",
+    "FILUSDT",
+    "LINKUSDT",
+    "LTCUSDT",
+    "NEARUSDT",
+    "SOLUSDT",
+    "TRXUSDT",
+    "XLMUSDT",
+    "XRPUSDT"
+  ],
+  "timestamp_count": 105060
+}

@@ -49,3 +49,11 @@ A compact pointwise MLP tests nonlinear interactions among the causal feature
 set before sequence architectures are introduced. Training uses fold-specific
 robust scaling, validation Rank-IC checkpoint selection, early stopping, and
 local MLflow experiment tracking.
+
+## Temporal sequence representation
+
+The TCN and Transformer share a memory-efficient 128-bar dataset. The complete
+panel is stored once as a timestamp-by-symbol-by-feature tensor, and overlapping
+windows are sliced on demand. A dedicated audit verifies temporal continuity,
+split alignment, complete cross-sections, and exact history exclusions before
+any sequence model is trained.
