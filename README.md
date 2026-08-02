@@ -71,3 +71,10 @@ The Transformer consumes the full 128-bar history as 32 causal four-bar
 patches. Masked self-attention prevents future-patch access, while patching
 reduces quadratic attention cost enough to evaluate every validation and test
 endpoint.
+
+## Cost-aware portfolio evaluation
+
+All models are compared using next-bar execution and 12 staggered,
+non-overlapping hourly cohorts. Each portfolio is dollar-neutral and
+unit-gross, holding the top four and bottom four contracts. Results include
+turnover and transaction-cost sensitivity from zero to ten basis points.

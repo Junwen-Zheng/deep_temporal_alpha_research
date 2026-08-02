@@ -1,0 +1,30 @@
+evaluation:
+  interval_minutes: 5
+  holding_bars: 12
+  top_count: 4
+  annualization_periods: 8760
+
+  cost_bps:
+    - 0.0
+    - 1.0
+    - 2.0
+    - 5.0
+    - 10.0
+
+  models:
+    momentum_12:
+      directory: "artifacts/predictions/baselines"
+    reversal_12:
+      directory: "artifacts/predictions/baselines"
+    ridge:
+      directory: "artifacts/predictions/baselines"
+    lightgbm:
+      directory: "artifacts/predictions/baselines"
+    mlp:
+      directory: "artifacts/predictions/neural"
+    tcn:
+      directory: "artifacts/predictions/neural"
+    transformer:
+      directory: "artifacts/predictions/neural"
+
+  evidence_dir: "artifacts/evidence"
