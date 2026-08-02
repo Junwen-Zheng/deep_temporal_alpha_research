@@ -149,3 +149,11 @@ market-wide realized volatility, and cross-sectional return dispersion.
 Fold-specific regime thresholds use only timestamps at or before the validation
 boundary. Predictive Rank IC, turnover, break-even cost, and cost-adjusted mean
 return are reported for every fold-regime cell.
+
+## Block-bootstrap uncertainty
+
+Timestamp-level Rank IC is evaluated with circular blocks from 60 to 240
+minutes. Portfolio gross return and turnover are resampled jointly within each
+non-overlapping hourly cohort using blocks from one day to one week. The
+resulting deterministic percentile intervals cover Rank IC, gross return,
+one-basis-point net return, turnover, and break-even transaction cost.

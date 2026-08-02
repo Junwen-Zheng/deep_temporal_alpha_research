@@ -1,0 +1,31 @@
+bootstrap:
+  data_config: "configs/data.yaml"
+  evaluation_config: "configs/evaluation.yaml"
+
+  source_oos_metrics: "artifacts/evidence/oos_model_metrics.csv"
+  source_portfolio_cohort_metrics: "artifacts/evidence/portfolio_cohort_metrics.csv"
+  source_portfolio_manifest: "artifacts/evidence/portfolio_run_manifest.json"
+
+  prediction_block_lengths:
+    - 12
+    - 24
+    - 48
+
+  portfolio_block_lengths:
+    - 24
+    - 72
+    - 168
+
+  primary_prediction_block_length: 12
+  primary_portfolio_block_length: 24
+
+  resamples: 1000
+  confidence_level: 0.95
+  random_seed: 20260802
+  focus_cost_bps: 1.0
+
+  expected_symbol_count: 20
+  expected_prediction_rows: 1041840
+  expected_prediction_timestamps: 52092
+
+  evidence_dir: "artifacts/evidence"
