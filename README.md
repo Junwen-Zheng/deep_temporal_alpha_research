@@ -133,3 +133,11 @@ break-even cost are reported for every temporal segment. Aggregate predictive
 and portfolio evidence must be reproduced before the decomposition is
 accepted, and overlapping monthly sleeves are not treated as independent
 Sharpe observations.
+
+## Symbol-dependence analysis
+
+Every contract is removed individually from the frozen out-of-sample
+evaluation. Rank IC and portfolio economics are recomputed on each remaining
+19-symbol universe. The full 20-symbol portfolio is also decomposed into
+per-symbol selection frequency and gross-return contribution, with
+single-symbol, top-three, and Herfindahl concentration measures.

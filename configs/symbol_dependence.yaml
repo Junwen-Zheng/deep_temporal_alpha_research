@@ -1,0 +1,20 @@
+symbol_dependence:
+  data_config: "configs/data.yaml"
+  evaluation_config: "configs/evaluation.yaml"
+
+  source_oos_metrics: "artifacts/evidence/oos_model_metrics.csv"
+  source_portfolio_cohort_metrics: "artifacts/evidence/portfolio_cohort_metrics.csv"
+  source_portfolio_manifest: "artifacts/evidence/portfolio_run_manifest.json"
+  source_break_even_summary: "artifacts/evidence/break_even_model_summary.csv"
+
+  cost_bps:
+    - 0.0
+    - 1.0
+
+  focus_cost_bps: 1.0
+
+  expected_symbol_count: 20
+  expected_prediction_rows: 1041840
+  expected_prediction_timestamps: 52092
+
+  evidence_dir: "artifacts/evidence"
