@@ -115,3 +115,12 @@ each side of the cross-section. Every breadth retains next-bar execution, the
 60-minute holding period, staggered non-overlapping cohorts, turnover
 accounting, and cost sensitivity. The four-per-side configuration is required
 to reproduce the primary portfolio evidence exactly.
+
+## Forecast and holding-horizon sensitivity
+
+Frozen out-of-sample predictions are evaluated against 15-, 30-, 60-, and
+120-minute forward returns. Each horizon reconstructs its labels and
+next-bar-open execution returns directly from normalized bars, preserves test
+fold boundaries, and uses horizon-matched non-overlapping cohorts. The
+60-minute configuration must reproduce the primary predictive and portfolio
+evidence exactly.
