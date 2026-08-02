@@ -11,6 +11,6 @@ data/processed/
 mlruns/
 artifacts/models/*.pt
 artifacts/models/*.onnx
-artifacts/predictions/*.parquet
+artifacts/predictions/
 
 *.egg-info/

@@ -35,3 +35,10 @@ the following 60-minute cross-sectionally demeaned log return.
 
 Every row records its label end time. Walk-forward splits remove observations
 whose forward target crosses a train, validation, or test boundary.
+
+## Research baselines
+
+The baseline layer compares 12-bar momentum and reversal scores with
+train-only-scaled Ridge regression and deterministic LightGBM. Ridge
+regularization is selected on validation Rank IC, while all test predictions
+remain untouched until selection is complete.

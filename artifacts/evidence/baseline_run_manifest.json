@@ -1,0 +1,428 @@
+{
+  "baseline_config": "configs/baselines.yaml",
+  "baseline_config_sha256": "e2d1fd4cb79140a17d86061e2baa0f703e57b46f1c1e3b4f7fe0ebdbd285d5bc",
+  "evidence_files": {
+    "artifacts/evidence/baseline_fold_metrics.csv": "84195eed13a0cda9da2585943a57a1afb603e9bd956d525e5361293f4cab4b80",
+    "artifacts/evidence/baseline_model_selection.csv": "37ece634a26b30aad19b3255e9048012f1aab095e9b0e61da9d6881ad71a0620",
+    "artifacts/evidence/baseline_summary.csv": "fd072f60d666c42d27abfa340a0a361239f769c7da9d6e8e826c92910643e05c"
+  },
+  "feature_columns": [
+    "return_1",
+    "return_3",
+    "return_12",
+    "return_48",
+    "log_range",
+    "close_open_return",
+    "realized_vol_12",
+    "realized_vol_48",
+    "log_quote_volume",
+    "volume_zscore_48",
+    "trade_count_zscore_48",
+    "taker_buy_ratio",
+    "time_of_day_sin",
+    "time_of_day_cos",
+    "weekday_sin",
+    "weekday_cos"
+  ],
+  "folds": [
+    {
+      "fold": 1,
+      "lightgbm_best_iteration": 5,
+      "ridge_alpha": 100.0,
+      "scaler": {
+        "feature_columns": [
+          "return_1",
+          "return_3",
+          "return_12",
+          "return_48",
+          "log_range",
+          "close_open_return",
+          "realized_vol_12",
+          "realized_vol_48",
+          "log_quote_volume",
+          "volume_zscore_48",
+          "trade_count_zscore_48",
+          "taker_buy_ratio",
+          "time_of_day_sin",
+          "time_of_day_cos",
+          "weekday_sin",
+          "weekday_cos"
+        ],
+        "median": [
+          0.0,
+          0.0,
+          0.0,
+          0.00014272461703512818,
+          0.002588779665529728,
+          0.0,
+          0.005835454445332289,
+          0.013086291961371899,
+          13.542983055114746,
+          -0.10952156409621239,
+          -0.13766662031412125,
+          0.4934491664171219,
+          0.0,
+          -1.8369701465288538e-16,
+          0.0,
+          -0.22252093255519867
+        ],
+        "scale": [
+          0.0022193400654941797,
+          0.0038111177855171263,
+          0.0074957916513085365,
+          0.015040563186630607,
+          0.0023300289176404476,
+          0.002214380307123065,
+          0.004512669402174652,
+          0.009057211456820369,
+          2.465162754058838,
+          1.451320305466652,
+          1.4648572504520416,
+          0.16448739171028137,
+          1.4142135381698608,
+          1.4142135381698608,
+          1.5636630058288574,
+          1.524458646774292
+        ]
+      },
+      "test_rows": 339600,
+      "train_rows": 880080,
+      "validation_rows": 178320
+    },
+    {
+      "fold": 2,
+      "lightgbm_best_iteration": 3,
+      "ridge_alpha": 100.0,
+      "scaler": {
+        "feature_columns": [
+          "return_1",
+          "return_3",
+          "return_12",
+          "return_48",
+          "log_range",
+          "close_open_return",
+          "realized_vol_12",
+          "realized_vol_48",
+          "log_quote_volume",
+          "volume_zscore_48",
+          "trade_count_zscore_48",
+          "taker_buy_ratio",
+          "time_of_day_sin",
+          "time_of_day_cos",
+          "weekday_sin",
+          "weekday_cos"
+        ],
+        "median": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.002452183747664094,
+          0.0,
+          0.005556501680985093,
+          0.01253434969112277,
+          13.34404182434082,
+          -0.10984174534678459,
+          -0.1408703327178955,
+          0.49412810802459717,
+          0.0,
+          -1.8369701465288538e-16,
+          0.0,
+          -0.22252093255519867
+        ],
+        "scale": [
+          0.0020671998790930957,
+          0.0035886358527932316,
+          0.007050035696011037,
+          0.014212160604074597,
+          0.0022510819835588336,
+          0.002063519030343741,
+          0.004368266090750694,
+          0.008744245860725641,
+          2.460331439971924,
+          1.448114737868309,
+          1.46249221265316,
+          0.17036571353673935,
+          1.4142135381698608,
+          1.4142135381698608,
+          1.5636630058288574,
+          1.524458646774292
+        ]
+      },
+      "test_rows": 351120,
+      "train_rows": 1237200,
+      "validation_rows": 161040
+    },
+    {
+      "fold": 3,
+      "lightgbm_best_iteration": 1,
+      "ridge_alpha": 10.0,
+      "scaler": {
+        "feature_columns": [
+          "return_1",
+          "return_3",
+          "return_12",
+          "return_48",
+          "log_range",
+          "close_open_return",
+          "realized_vol_12",
+          "realized_vol_48",
+          "log_quote_volume",
+          "volume_zscore_48",
+          "trade_count_zscore_48",
+          "taker_buy_ratio",
+          "time_of_day_sin",
+          "time_of_day_cos",
+          "weekday_sin",
+          "weekday_cos"
+        ],
+        "median": [
+          0.0,
+          0.0,
+          0.0,
+          -3.371657840034459e-05,
+          0.0024753283942118287,
+          0.0,
+          0.0056052440777421,
+          0.01266838051378727,
+          13.215731143951416,
+          -0.10684677958488464,
+          -0.1390916332602501,
+          0.4950309097766876,
+          0.0,
+          -1.8369701465288538e-16,
+          0.0,
+          -0.22252093255519867
+        ],
+        "scale": [
+          0.00206336984410882,
+          0.003621046169428155,
+          0.007125788601115346,
+          0.01436541450675577,
+          0.0022743676090613008,
+          0.002059340651612729,
+          0.004387828288599849,
+          0.008747968589887023,
+          2.4686901569366455,
+          1.441741943359375,
+          1.4603185802698135,
+          0.17276037484407425,
+          1.4142135381698608,
+          1.4142135381698608,
+          1.5636630058288574,
+          1.524458646774292
+        ]
+      },
+      "test_rows": 351120,
+      "train_rows": 1577040,
+      "validation_rows": 172560
+    }
+  ],
+  "models": [
+    "momentum_12",
+    "reversal_12",
+    "ridge",
+    "lightgbm"
+  ],
+  "prediction_files": [
+    {
+      "fold": 1,
+      "model": "lightgbm",
+      "path": "artifacts/predictions/baselines/lightgbm_fold_1_test.parquet",
+      "rows": 339600,
+      "sha256": "ff88d7b75eddb36e804c552a0cc83476e77c5b1d1985e41dd139a84b9dd8ae10",
+      "split": "test"
+    },
+    {
+      "fold": 1,
+      "model": "lightgbm",
+      "path": "artifacts/predictions/baselines/lightgbm_fold_1_validation.parquet",
+      "rows": 178320,
+      "sha256": "c8d90eef4f1377d2da77b6f5ec7725977c3101e441be01b9a4d5821ebd1172a0",
+      "split": "validation"
+    },
+    {
+      "fold": 2,
+      "model": "lightgbm",
+      "path": "artifacts/predictions/baselines/lightgbm_fold_2_test.parquet",
+      "rows": 351120,
+      "sha256": "1632f9d204981ecdc198050f73555e6d468981cd778c113b95d626ac22f5edbc",
+      "split": "test"
+    },
+    {
+      "fold": 2,
+      "model": "lightgbm",
+      "path": "artifacts/predictions/baselines/lightgbm_fold_2_validation.parquet",
+      "rows": 161040,
+      "sha256": "56b75424ad880e5590e6c2c49c6c3157a507170d5e5998ca8aea98e14999b610",
+      "split": "validation"
+    },
+    {
+      "fold": 3,
+      "model": "lightgbm",
+      "path": "artifacts/predictions/baselines/lightgbm_fold_3_test.parquet",
+      "rows": 351120,
+      "sha256": "d1d4605c6f505b1fb2ebdbe8d4659faf5c1f4df545f24e5211701c2e3e29e48f",
+      "split": "test"
+    },
+    {
+      "fold": 3,
+      "model": "lightgbm",
+      "path": "artifacts/predictions/baselines/lightgbm_fold_3_validation.parquet",
+      "rows": 172560,
+      "sha256": "b9a77a545566f419ffb964e81ea253d86de66cd7db323cd6cf4be6fa4a2ee873",
+      "split": "validation"
+    },
+    {
+      "fold": 1,
+      "model": "momentum_12",
+      "path": "artifacts/predictions/baselines/momentum_12_fold_1_test.parquet",
+      "rows": 339600,
+      "sha256": "d093e79315a95c81454ad4fa7c5b2cf3a7fc41c62f4cb38a5a299b06a8987709",
+      "split": "test"
+    },
+    {
+      "fold": 1,
+      "model": "momentum_12",
+      "path": "artifacts/predictions/baselines/momentum_12_fold_1_validation.parquet",
+      "rows": 178320,
+      "sha256": "30a104811911e4f1121c7a1839e7a2d5997f47bfbe61eebb3926f90f76c8fea6",
+      "split": "validation"
+    },
+    {
+      "fold": 2,
+      "model": "momentum_12",
+      "path": "artifacts/predictions/baselines/momentum_12_fold_2_test.parquet",
+      "rows": 351120,
+      "sha256": "bd45cd7bfa66069bdeebf9e7cb007a00778e71ff949f6f970dcd6f7e19a9c18a",
+      "split": "test"
+    },
+    {
+      "fold": 2,
+      "model": "momentum_12",
+      "path": "artifacts/predictions/baselines/momentum_12_fold_2_validation.parquet",
+      "rows": 161040,
+      "sha256": "1e9a584cd09afd6343e7df469f6ddd842b908b5fd92a925c9b85dfd11ab22e85",
+      "split": "validation"
+    },
+    {
+      "fold": 3,
+      "model": "momentum_12",
+      "path": "artifacts/predictions/baselines/momentum_12_fold_3_test.parquet",
+      "rows": 351120,
+      "sha256": "2fd79ada79d9d1d73f4663d9f0cdda1d4ea0a86b810fa34af68c658d054dd771",
+      "split": "test"
+    },
+    {
+      "fold": 3,
+      "model": "momentum_12",
+      "path": "artifacts/predictions/baselines/momentum_12_fold_3_validation.parquet",
+      "rows": 172560,
+      "sha256": "e4967d7aeae16bfc8c3c02660fa5d4d683d482738e21aca5250bc1571e11b3a3",
+      "split": "validation"
+    },
+    {
+      "fold": 1,
+      "model": "reversal_12",
+      "path": "artifacts/predictions/baselines/reversal_12_fold_1_test.parquet",
+      "rows": 339600,
+      "sha256": "bac2e38e95c3be00d845e96be8e6747d774a7be3adb3c5f902e92d4cc4bd2491",
+      "split": "test"
+    },
+    {
+      "fold": 1,
+      "model": "reversal_12",
+      "path": "artifacts/predictions/baselines/reversal_12_fold_1_validation.parquet",
+      "rows": 178320,
+      "sha256": "2e2639247264a0f0d0bde37cc914a703860ce47d7b3f5b060eaf3640cebacea7",
+      "split": "validation"
+    },
+    {
+      "fold": 2,
+      "model": "reversal_12",
+      "path": "artifacts/predictions/baselines/reversal_12_fold_2_test.parquet",
+      "rows": 351120,
+      "sha256": "0562cc4e30eb3329c618eaeec831a3a45b631623c7274fb22cb61c05ddf25ee5",
+      "split": "test"
+    },
+    {
+      "fold": 2,
+      "model": "reversal_12",
+      "path": "artifacts/predictions/baselines/reversal_12_fold_2_validation.parquet",
+      "rows": 161040,
+      "sha256": "ae8f73f6c73482ed6b1bb9bd2f9b9379e96cade30452d2477529dca16a06a0e4",
+      "split": "validation"
+    },
+    {
+      "fold": 3,
+      "model": "reversal_12",
+      "path": "artifacts/predictions/baselines/reversal_12_fold_3_test.parquet",
+      "rows": 351120,
+      "sha256": "6db826b56e2284d8370a3d83cc23ae79b63bd87d921f4e78bf77827601254bb1",
+      "split": "test"
+    },
+    {
+      "fold": 3,
+      "model": "reversal_12",
+      "path": "artifacts/predictions/baselines/reversal_12_fold_3_validation.parquet",
+      "rows": 172560,
+      "sha256": "174df41415576c607eaaa604ad15c8c4bbb0271273404f2a1f830f960857220d",
+      "split": "validation"
+    },
+    {
+      "fold": 1,
+      "model": "ridge",
+      "path": "artifacts/predictions/baselines/ridge_fold_1_test.parquet",
+      "rows": 339600,
+      "sha256": "fdc59586a7a7c7359cdae2b1c40d589e7dc116becd026ac9d928ce4fd6968e71",
+      "split": "test"
+    },
+    {
+      "fold": 1,
+      "model": "ridge",
+      "path": "artifacts/predictions/baselines/ridge_fold_1_validation.parquet",
+      "rows": 178320,
+      "sha256": "4e3d47cab2ee553e666872974fd9f254276b7099cce5c3d6ca49480fa15af172",
+      "split": "validation"
+    },
+    {
+      "fold": 2,
+      "model": "ridge",
+      "path": "artifacts/predictions/baselines/ridge_fold_2_test.parquet",
+      "rows": 351120,
+      "sha256": "4fd1de8bd2136929983fd97909353ae7324e18f6218c1e298191fe869c2ac38f",
+      "split": "test"
+    },
+    {
+      "fold": 2,
+      "model": "ridge",
+      "path": "artifacts/predictions/baselines/ridge_fold_2_validation.parquet",
+      "rows": 161040,
+      "sha256": "043c0d84227dd85b6009df4b712b6030aa7efe6b04bbe7095b89454ffb4d040c",
+      "split": "validation"
+    },
+    {
+      "fold": 3,
+      "model": "ridge",
+      "path": "artifacts/predictions/baselines/ridge_fold_3_test.parquet",
+      "rows": 351120,
+      "sha256": "108f60ee9d0553ca8bfcc9dcbbbb6d28cff7f9f8084ec4285b6b39c3487af20d",
+      "split": "test"
+    },
+    {
+      "fold": 3,
+      "model": "ridge",
+      "path": "artifacts/predictions/baselines/ridge_fold_3_validation.parquet",
+      "rows": 172560,
+      "sha256": "f645ad5d568245e5c6216f9ba76ff63e7b6ffd49c4aacdfe5e778da6fadd731b",
+      "split": "validation"
+    }
+  ],
+  "research_config": "configs/research.yaml",
+  "research_config_sha256": "8fcc869ee0e6921f75ec1cbfc03f2744f62cafffba268641678479dd3aad1888",
+  "research_panel": "data/processed/research/research_panel.parquet",
+  "research_panel_sha256": "aa3a0df29e2e414626cd5044c7d18ce98e26d48c5be808fdbbdfcff695434cbc",
+  "schema_version": 1,
+  "source_research_manifest": "data/manifests/research_dataset_manifest.json",
+  "source_research_manifest_sha256": "d28aef2d0b7004dff4064023268d62cc72ce09b0cc04598b9f5c5e7afae0246f"
+}

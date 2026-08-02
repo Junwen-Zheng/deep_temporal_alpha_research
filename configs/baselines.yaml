@@ -1,0 +1,27 @@
+baselines:
+  seed: 42
+
+  prediction_dir: "artifacts/predictions/baselines"
+  evidence_dir: "artifacts/evidence"
+
+  ridge:
+    alphas:
+      - 0.1
+      - 1.0
+      - 10.0
+      - 100.0
+
+  lightgbm:
+    objective: "regression"
+    n_estimators: 400
+    learning_rate: 0.03
+    num_leaves: 31
+    max_depth: -1
+    min_child_samples: 200
+    subsample: 0.8
+    subsample_freq: 1
+    colsample_bytree: 0.8
+    reg_alpha: 0.001
+    reg_lambda: 0.01
+    early_stopping_rounds: 40
+    n_jobs: -1
