@@ -107,3 +107,11 @@ and 60 minutes. Every clock phase is included through equal-capital staggered
 hourly sleeves. The analysis reports phase-level mean return, turnover and
 break-even cost without treating overlapping launches as independent Sharpe
 observations.
+
+## Portfolio-breadth sensitivity
+
+Dollar-neutral portfolios are evaluated using between one and ten contracts on
+each side of the cross-section. Every breadth retains next-bar execution, the
+60-minute holding period, staggered non-overlapping cohorts, turnover
+accounting, and cost sensitivity. The four-per-side configuration is required
+to reproduce the primary portfolio evidence exactly.
