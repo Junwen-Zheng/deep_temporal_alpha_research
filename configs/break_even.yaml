@@ -1,0 +1,20 @@
+break_even:
+  evaluation_config: "configs/evaluation.yaml"
+
+  source_cohort_metrics: "artifacts/evidence/portfolio_cohort_metrics.csv"
+  source_portfolio_summary: "artifacts/evidence/portfolio_summary.csv"
+  source_portfolio_manifest: "artifacts/evidence/portfolio_run_manifest.json"
+
+  cost_curve:
+    start_bps: 0.0
+    end_bps: 10.0
+    step_bps: 0.1
+
+  robustness_costs_bps:
+    - 0.0
+    - 1.0
+    - 2.0
+    - 5.0
+    - 10.0
+
+  evidence_dir: "artifacts/evidence"

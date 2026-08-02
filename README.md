@@ -92,3 +92,10 @@ All forward labels are reconstructed directly from normalized bars, including
 their exact 12-bar end timestamps and cross-sectional demeaning. The audit also
 reconstructs next-bar-open execution returns, verifies split containment, and
 checks every frozen prediction file against the canonical research panel.
+
+## Break-even transaction costs
+
+The economic analysis computes exact cohort-level, equal-weighted, and pooled
+break-even transaction costs. A dense 0–10 basis-point curve shows how quickly
+mean returns deteriorate with traded notional without interpolating nonlinear
+Sharpe-ratio behavior.

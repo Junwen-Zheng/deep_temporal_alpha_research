@@ -1,0 +1,41 @@
+{
+  "annualization_periods": 8760,
+  "break_even_config": "configs/break_even.yaml",
+  "break_even_config_sha256": "5a03d3bece86991f593d52f92ae0526bc6da6274f1bdc9c6d175c82d10ff76cd",
+  "break_even_definition": "transaction cost per unit of one-way traded notional at which mean net log return is zero",
+  "cohort_count_per_model": 12,
+  "cost_curve_end_bps": 10.0,
+  "cost_curve_points": 101,
+  "cost_curve_start_bps": 0.0,
+  "cost_curve_step_bps": 0.1,
+  "evaluation_config": "configs/evaluation.yaml",
+  "evaluation_config_sha256": "c689e74f6bdba0b35b45ee2084652bfc9afa9b53e4499b98308353164ae1a242",
+  "evidence_files": {
+    "artifacts/evidence/break_even_cohort_metrics.csv": "3160c96a648c7de307d08e3abc5aaa91a629acefb085a2ab40332e0cfaccacbf",
+    "artifacts/evidence/break_even_cost_curve.csv": "47fd4688ee52566729ca4f9919e7629fc2452e50637a0459a5922072f93b7a71",
+    "artifacts/evidence/break_even_model_summary.csv": "037d377a51ecd4ea4996f609e3664d0261eab317d4bd6ee59818eca22cc004cb"
+  },
+  "models": [
+    "momentum_12",
+    "reversal_12",
+    "ridge",
+    "lightgbm",
+    "mlp",
+    "tcn",
+    "transformer"
+  ],
+  "robustness_costs_bps": [
+    0.0,
+    1.0,
+    2.0,
+    5.0,
+    10.0
+  ],
+  "schema_version": 1,
+  "source_cohort_metrics": "artifacts/evidence/portfolio_cohort_metrics.csv",
+  "source_cohort_metrics_sha256": "e3bb42397960d07365dd5e7fb477d06a31b89d2a6344980d3605b9df97b379f7",
+  "source_portfolio_manifest": "artifacts/evidence/portfolio_run_manifest.json",
+  "source_portfolio_manifest_sha256": "ba93c5bc82c508e036364e856d6b2a4d74016a89f369bceecbc71228a8586d98",
+  "source_portfolio_summary": "artifacts/evidence/portfolio_summary.csv",
+  "source_portfolio_summary_sha256": "4756e473349339a54691b415f07307901d05be71b12eb7ab19f4f4a3c7c03d53"
+}
