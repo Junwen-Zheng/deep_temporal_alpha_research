@@ -124,3 +124,12 @@ next-bar-open execution returns directly from normalized bars, preserves test
 fold boundaries, and uses horizon-matched non-overlapping cohorts. The
 60-minute configuration must reproduce the primary predictive and portfolio
 evidence exactly.
+
+## Fold and monthly stability
+
+Frozen 60-minute predictions are decomposed by walk-forward fold and UTC
+calendar month. Predictive Rank IC, portfolio mean return, turnover, and
+break-even cost are reported for every temporal segment. Aggregate predictive
+and portfolio evidence must be reproduced before the decomposition is
+accepted, and overlapping monthly sleeves are not treated as independent
+Sharpe observations.
