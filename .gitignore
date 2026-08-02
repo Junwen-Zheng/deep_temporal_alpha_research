@@ -14,3 +14,5 @@ artifacts/models/*.onnx
 artifacts/predictions/
 
 *.egg-info/
+mlflow.db
+mlartifacts/

@@ -1,0 +1,25 @@
+neural:
+  seed: 42
+  device: "auto"
+
+  prediction_dir: "artifacts/predictions/neural"
+  model_dir: "artifacts/models"
+  evidence_dir: "artifacts/evidence"
+
+  mlflow:
+    database_path: "mlflow.db"
+    artifact_dir: "mlartifacts"
+    experiment_name: "deep_temporal_alpha_mlp"
+
+  mlp:
+    hidden_dims:
+      - 128
+      - 64
+    dropout: 0.10
+    batch_size: 8192
+    max_epochs: 8
+    patience: 2
+    minimum_improvement: 0.000001
+    learning_rate: 0.001
+    weight_decay: 0.0001
+    gradient_clip_norm: 1.0

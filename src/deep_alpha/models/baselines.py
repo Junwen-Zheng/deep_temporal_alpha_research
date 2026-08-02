@@ -1,12 +1,13 @@
 from __future__ import annotations
 
 from collections.abc import Mapping
-from typing import Any
+from typing import TYPE_CHECKING, Any
 
-import lightgbm as lgb
 import numpy as np
-from lightgbm import LGBMRegressor
-from sklearn.linear_model import Ridge
+
+if TYPE_CHECKING:
+    from lightgbm import LGBMRegressor
+    from sklearn.linear_model import Ridge
 
 
 def fit_ridge(
@@ -14,6 +15,8 @@ def fit_ridge(
     targets: np.ndarray,
     alpha: float,
 ) -> Ridge:
+    from sklearn.linear_model import Ridge
+
     if alpha <= 0:
         raise ValueError("Ridge alpha must be positive")
 
@@ -34,6 +37,9 @@ def fit_lightgbm(
     configuration: Mapping[str, Any],
     seed: int,
 ) -> LGBMRegressor:
+    import lightgbm as lgb
+    from lightgbm import LGBMRegressor
+
     parameters = dict(configuration)
 
     early_stopping_rounds = int(
@@ -51,12 +57,8 @@ def fit_lightgbm(
     model.fit(
         train_features,
         train_targets,
-        eval_set=[
-            (
-                validation_features,
-                validation_targets,
-            )
-        ],
+        eval_X=validation_features,
+        eval_y=validation_targets,
         eval_metric="l2",
         callbacks=[
             lgb.early_stopping(

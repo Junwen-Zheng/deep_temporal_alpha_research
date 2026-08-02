@@ -42,3 +42,10 @@ The baseline layer compares 12-bar momentum and reversal scores with
 train-only-scaled Ridge regression and deterministic LightGBM. Ridge
 regularization is selected on validation Rank IC, while all test predictions
 remain untouched until selection is complete.
+
+## Neural baseline
+
+A compact pointwise MLP tests nonlinear interactions among the causal feature
+set before sequence architectures are introduced. Training uses fold-specific
+robust scaling, validation Rank-IC checkpoint selection, early stopping, and
+local MLflow experiment tracking.
